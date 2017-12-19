@@ -9,7 +9,7 @@
  *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-@import "./other.css";
+@import "other.scss";
 
 html {
     box-sizing: border-box;
@@ -26,11 +26,12 @@ body {
     font-family: Arial, Geneva, sans-serif;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, auto);
-}
 
-.box {
-    background-color: red;
-    border: 5px solid black;
-    height: 100px;
-    width: 100px;
+    .box {
+        background-color: #333aae;
+        border: 5px solid black;
+        height: 100px;
+        width: 100px;
+        margin: 5% auto;
+    }
 }
