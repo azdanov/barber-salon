@@ -1,2 +1,3 @@
-# barber-salon
+# Barber Salon
+
 Barber Salon website template

@@ -1,0 +1,38 @@
+{
+    "name": "barber-salon",
+    "version": "0.0.1",
+    "description": "Barber Salon website template",
+    "main": "index.js",
+    "repository": "git@github.com:azdanov/barber-salon.git",
+    "author": "Anton Zdanov <akumael@gmail.com>",
+    "license": "MIT",
+    "private": true,
+    "dependencies": {
+        "autoprefixer": "^7.2.3",
+        "babel-preset-env": "^1.6.1",
+        "parcel-bundler": "^1.2.1"
+    },
+    "scripts": {
+        "start": "parcel src/index.html",
+        "build": "parcel build src/index.html",
+        "clean": "rimraf dist .cache",
+        "prelint:css": "prettier --write src/**/*.css",
+        "lint:css": "stylelint \"src/**/*.css\" --fix",
+        "lint:js": "eslint --ext=js src/**/*.js --fix",
+        "lint": "run-p lint:**"
+    },
+    "devDependencies": {
+        "eslint": "^4.9.0",
+        "eslint-config-airbnb": "16.1.0",
+        "eslint-config-prettier": "^2.9.0",
+        "eslint-plugin-import": "^2.7.0",
+        "eslint-plugin-jsx-a11y": "^6.0.2",
+        "eslint-plugin-prettier": "^2.4.0",
+        "eslint-plugin-react": "^7.4.0",
+        "npm-run-all": "^4.1.2",
+        "prettier": "^1.9.2",
+        "rimraf": "^2.6.2",
+        "stylelint": "^8.4.0",
+        "stylelint-config-standard": "^18.0.0"
+    }
+}
