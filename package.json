@@ -12,11 +12,10 @@
         "babel-preset-env": "^1.6.1",
         "node-sass": "^4.7.2",
         "parcel-bundler": "^1.2.1",
-        "rimraf": "^2.6.2"
+        "rimraf": "^2.6.2",
+        "sanitize.css": "^5.0.0"
     },
     "scripts": {
-        "prestart": "npm run clean",
-        "prebuild": "npm run clean",
         "prelint:css": "prettier --write src/**/*.{scss,css}",
         "start": "parcel src/index.html",
         "build": "parcel build src/index.html",
