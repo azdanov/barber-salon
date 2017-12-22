@@ -17,23 +17,54 @@
             content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link href="https://fonts.googleapis.com/css?family=Cabin:600" rel="stylesheet">
+        <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+        <link rel="manifest" href="favicons/manifest.json">
+        <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="theme-color" content="#ffffff">
         <script src="scripts/index.js"></script>
         <title>Barber Salon</title>
     </head>
-    <body class="o-page">
-        <div class="o-header">
+    <body class="page">
+        <div class="mainHeader">
             <div class="u-wrapper">
-                <nav class="o-navigation">
-                    <ul class="m-menu">
-                        <li class="a-menuItem"><a href="" class="a-menuItem--Link">Home</a></li>
-                        <li class="a-menuItem"><a href="" class="a-menuItem--Link">News</a></li>
-                        <li class="a-menuItem"><a href="" class="a-menuItem--Link">Price</a></li>
-                        <li class="a-menuItem"><a href="" class="a-menuItem--Link">Store</a></li>
-                        <li class="a-menuItem"><a href="" class="a-menuItem--Link">Contact</a></li>
-                        <li class="a-menuItem -login"><a href="" class="a-menuItem--Link -login">Login</a></li>
+                <nav class="mainNavigation">
+                    <ul class="mainMenu">
+                        <li class="mainMenu__item"><a href="" class="mainMenu__link">Home</a></li>
+                        <li class="mainMenu__item"><a href="" class="mainMenu__link">News</a></li>
+                        <li class="mainMenu__item"><a href="" class="mainMenu__link">Price</a></li>
+                        <li class="mainMenu__item"><a href="" class="mainMenu__link">Store</a></li>
+                        <li class="mainMenu__item"><a href="" class="mainMenu__link">Contact</a></li>
+                        <li class="mainMenu__item -login"><a href="" class="mainMenu__link -login">Login</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
+        <main class="mainPage">
+            <div class="hero">
+                <div class="u-wrapper">
+                    <div class="heroMain">
+                        <h1 class="heroMain__title">Barbershop <span class="heroMain__subtitle">Moustache</span></h1>
+                    </div>
+                    <div class="heroHeadlines">
+                        <section class="heroHeadline">
+                            <h2 class="heroHeadline__title">Fast</h2>
+                            <p class="heroHeadline__paragraph">We will do our job fast! Two hours will pass unnoticed
+                                resulting in your new stylish haircut.</p>
+                        </section>
+                        <section class="heroHeadline">
+                            <h2 class="heroHeadline__title">Stylish</h2>
+                            <p class="heroHeadline__paragraph">Forget your previous haircuts. We will make a movie or a
+                                soccer star out of you. At least externally.</p>
+                        </section>
+                        <section class="heroHeadline">
+                            <h2 class="heroHeadline__title">Expensive</h2>
+                            <p class="heroHeadline__paragraph">Our professionals need proper rewards. Besides, doesn't price indicate a certain status?</p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </main>
     </body>
 </html>

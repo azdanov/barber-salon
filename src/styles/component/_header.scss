@@ -1,0 +1,167 @@
+/*!
+ * MIT License
+ *
+ * Copyright (c) 2017 Anton Zdanov
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+
+$marginMenu: 3rem;
+$fontSizeMenu: 2rem;
+
+$menuUnderlineSize: 0.3rem;
+$heightRatio: 2.6;
+
+.mainHeader {
+    background-color: $darkColor;
+    padding-bottom: 0.5rem;
+    width: 100vw;
+}
+
+.mainNavigation {
+    width: 100%;
+}
+
+.mainMenu {
+    height: 13rem;
+    margin: 0;
+}
+
+.mainMenu__item {
+    font-size: $fontSizeMenu;
+
+    &:nth-child(odd) {
+        float: left;
+        padding: 0.5em;
+        text-align: center;
+        width: 50%;
+    }
+
+    &:nth-child(even) {
+        float: right;
+        padding: 0.5em;
+        width: 50%;
+    }
+}
+
+.mainMenu__link {
+    font-family: $fontFamilyCabin;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:link,
+    &:visited {
+        color: $lightColor;
+    }
+}
+
+@media screen and (max-width: #{$medium - 1}) {
+    .mainMenu__link {
+        &::after,
+        &::before {
+            content: "";
+            display: inline-block;
+            height: 1.5rem;
+            margin: 0 0.75rem;
+            width: 1rem;
+        }
+
+        &:hover::after,
+        &:active::after,
+        &:hover::before,
+        &:active::before {
+            background-image: $diamondShapeIcon;
+            background-size: 100% 100%;
+        }
+    }
+}
+
+@media screen and (min-width: $medium) {
+    .mainHeader {
+        padding-bottom: 0;
+    }
+
+    .mainMenu {
+        display: flex;
+        height: calc(#{$heightRatio} * #{$fontSizeMenu} + 2 * #{$menuUnderlineSize});
+        padding-top: $menuUnderlineSize;
+    }
+
+    .mainMenu__item {
+        font-size: $fontSizeMenu;
+        margin-left: $marginMenu;
+        align-items: left;
+
+        &:nth-child(odd) {
+            padding: 0;
+            text-align: left;
+            width: auto;
+        }
+
+        &:nth-child(even) {
+            padding: 0;
+            width: auto;
+        }
+
+        &.-login {
+            margin-left: auto;
+            margin-right: $marginMenu;
+        }
+    }
+
+    .mainMenu__link {
+        border-bottom: $menuUnderlineSize solid transparent;
+        display: inline-block;
+        font-family: $fontFamilyCabin;
+        line-height: calc(#{$heightRatio} * #{$fontSizeMenu} - #{$menuUnderlineSize} + 0.25rem);
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &.-login::before {
+            background-image: $loginEnterIcon;
+            background-size: 2rem calc(#{$fontSizeMenu} - 0.5rem);
+            content: "";
+            display: inline-block;
+            height: calc(#{$fontSizeMenu} - 0.5rem);
+            margin-right: 1rem;
+            opacity: 0.3;
+            width: 2rem;
+        }
+
+        &:link,
+        &:visited {
+            color: $lightColor;
+        }
+
+        &:hover {
+            border-bottom-color: $lightColor;
+        }
+
+        &.-login:hover {
+            border-bottom-color: transparent;
+        }
+
+        &.-login:hover::before {
+            opacity: 1;
+        }
+    }
+}
+
+@media screen and (min-width: $large) {
+    .mainMenu__link {
+        &.-login::before {
+            background-image: $loginEnterIcon;
+            background-size: 2rem calc(#{$fontSizeMenu} - 0.5rem);
+            content: "";
+            display: inline-block;
+            height: calc(#{$fontSizeMenu} - 0.5rem);
+            margin-right: 1rem;
+            opacity: 0.3;
+            width: 2rem;
+        }
+    }
+}

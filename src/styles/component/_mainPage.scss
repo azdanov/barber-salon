@@ -10,6 +10,20 @@
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-@import "header";
-@import "hero";
-@import "mainPage";
+.mainPage {
+    width: 100%;
+    min-height: 100%;
+    background: black url('https://res.cloudinary.com/anton-zdanov/image/upload/q_auto/v1513960129/Artboard_1_0_25x_khmkll.jpg') no-repeat center top;
+}
+
+@media screen and (min-width: 630px) {
+    .mainPage {
+        background-image: url('https://res.cloudinary.com/anton-zdanov/image/upload/q_auto/v1513960129/Artboard_1_0_5x_oqkm20.jpg');
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .mainPage {
+        background-image: url('https://res.cloudinary.com/anton-zdanov/image/upload/q_auto/v1513960129/Artboard_1_0_75x_grffgf.jpg');
+    }
+}
