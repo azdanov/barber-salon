@@ -1,4 +1,4 @@
-/*
+/*!
  * MIT License
  *
  * Copyright (c) 2017 Anton Zdanov
@@ -9,7 +9,35 @@
  *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-@import "../../node_modules/sanitize.css/sanitize";
-@import "base/all";
-@import "utils/all";
-@import "component/all";
+
+.contact__title {
+    font-size: $titleSize;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.contact__info,
+.contact__schedule {
+    font-size: $textSize;
+    letter-spacing: 0.1rem;
+    line-height: 1.6;
+    margin: 0 auto;
+    padding: 0 2%;
+    max-width: $indexInfoWidth;
+}
+
+.contact__schedule {
+    margin-top: 2rem;
+}
+
+.contact__controls {
+    display: flex;
+    justify-content: space-between;
+    max-width: $indexInfoWidth;
+    padding: 0 2%;
+    margin: 4rem auto 1rem;
+}
+
+.contact__button {
+    @include button($darkColor, $lightColor);
+}

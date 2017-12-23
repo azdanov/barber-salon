@@ -11,14 +11,13 @@
  */
 
 $marginMenu: 3rem;
-$fontSizeMenu: 2rem;
+$fontSizeMenu: $textSize;
 
 $menuUnderlineSize: 0.3rem;
 $heightRatio: 2.6;
 
 .mainHeader {
     background-color: $darkColor;
-    padding-bottom: 0.5rem;
     width: 100vw;
 }
 
@@ -80,6 +79,53 @@ $heightRatio: 2.6;
     }
 }
 
+@media screen and (min-width: 425px) {
+    .mainMenu {
+        display: flex;
+        justify-content: space-around;
+        flex-flow: row wrap;
+        align-items: center;
+        align-content: space-around;
+        height: calc(#{$heightRatio * 1.5} * #{$fontSizeMenu});
+    }
+
+    .mainMenu__item {
+        &:nth-child(odd) {
+            padding: 0;
+            text-align: left;
+            width: auto;
+        }
+
+        &:nth-child(even) {
+            padding: 0;
+            width: auto;
+        }
+    }
+}
+
+@media screen and (min-width: 643px) {
+    .mainMenu__item:last-child {
+        margin-left: auto;
+    }
+
+    .mainMenu__link {
+        &.-login::after {
+            background-image: initial;
+        }
+
+        &.-login::before {
+            background-image: $loginEnterIcon;
+            background-size: 2rem calc(#{$fontSizeMenu} - 0.5rem);
+            content: "";
+            display: inline-block;
+            height: calc(#{$fontSizeMenu} - 0.5rem);
+            margin-right: 1rem;
+            opacity: 0.3;
+            width: 2rem;
+        }
+    }
+}
+
 @media screen and (min-width: $medium) {
     .mainHeader {
         padding-bottom: 0;
@@ -95,17 +141,6 @@ $heightRatio: 2.6;
         font-size: $fontSizeMenu;
         margin-left: $marginMenu;
         align-items: left;
-
-        &:nth-child(odd) {
-            padding: 0;
-            text-align: left;
-            width: auto;
-        }
-
-        &:nth-child(even) {
-            padding: 0;
-            width: auto;
-        }
 
         &.-login {
             margin-left: auto;
@@ -147,21 +182,6 @@ $heightRatio: 2.6;
 
         &.-login:hover::before {
             opacity: 1;
-        }
-    }
-}
-
-@media screen and (min-width: $large) {
-    .mainMenu__link {
-        &.-login::before {
-            background-image: $loginEnterIcon;
-            background-size: 2rem calc(#{$fontSizeMenu} - 0.5rem);
-            content: "";
-            display: inline-block;
-            height: calc(#{$fontSizeMenu} - 0.5rem);
-            margin-right: 1rem;
-            opacity: 0.3;
-            width: 2rem;
         }
     }
 }

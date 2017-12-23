@@ -1,4 +1,4 @@
-/*
+/*!
  * MIT License
  *
  * Copyright (c) 2017 Anton Zdanov
@@ -9,7 +9,23 @@
  *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-@import "../../node_modules/sanitize.css/sanitize";
-@import "base/all";
-@import "utils/all";
-@import "component/all";
+
+@mixin button($backgroundColor, $textColor) {
+    background: $backgroundColor;
+    color: $textColor;
+    text-decoration: none;
+    padding: 0.8rem 2.5rem;
+    font-family: $fontFamilyCabin;
+    font-size: 2em;
+    cursor: pointer;
+    text-transform: uppercase;
+
+    &:hover {
+        background: darken($backgroundColor, 8%);
+        transition: all 0.2s ease;
+    }
+
+    &:active {
+        background: darken($backgroundColor, 25%);
+    }
+}

@@ -1,4 +1,4 @@
-/*
+/*!
  * MIT License
  *
  * Copyright (c) 2017 Anton Zdanov
@@ -9,7 +9,30 @@
  *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-@import "../../node_modules/sanitize.css/sanitize";
-@import "base/all";
-@import "utils/all";
-@import "component/all";
+
+.gallery__title {
+    font-size: $titleSize;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.gallery__image {
+    display: block;
+    margin: 0 auto;
+    max-width: $indexInfoWidth;
+    padding: 0.7rem 2%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.gallery__controls {
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem auto 1rem;
+    max-width: $indexInfoWidth;
+    padding: 0 2%;
+}
+
+.gallery__button {
+    @include button($darkColor, $lightColor);
+}

@@ -13,6 +13,7 @@
 .hero {
     color: $lightColor;
     font-family: $fontFamilyCabin;
+    margin-bottom: 3rem;
 }
 
 .heroMain {
@@ -62,7 +63,7 @@
     text-align: center;
 
     & .heroHeadline__title {
-        font-size: 3.5rem;
+        font-size: $titleSize;
         margin: 0;
 
         &::after {
@@ -78,7 +79,7 @@
 
     & .heroHeadline__paragraph {
         margin: 0 auto 3rem;
-        font-size: 2rem;
+        font-size: $textSize;
     }
 }
 
