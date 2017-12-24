@@ -70,6 +70,6 @@ require = (function (modules, cache, entry) {
   return newRequire;
 })({17:[function(require,module,exports) {
 
-},{}],15:[function(require,module,exports) {
+},{}],16:[function(require,module,exports) {
 "use strict";require("../styles/index.scss");
-},{"../styles/index.scss":17}]},{},[15])
+},{"../styles/index.scss":17}]},{},[16])
