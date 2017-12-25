@@ -68,7 +68,7 @@ require = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({12:[function(require,module,exports) {
+})({13:[function(require,module,exports) {
 module.exports = {
     "name": "",
     "icons": [
@@ -86,4 +86,4 @@ module.exports = {
     "theme_color": "#ffffff",
     "background_color": "#ffffff"
 };
-},{}]},{},[12])
+},{}]},{},[13])
