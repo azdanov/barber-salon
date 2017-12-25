@@ -1,1 +1,234 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="X-UA-Compatible" content="ie=edge"><link href="https://fonts.googleapis.com/css?family=Cabin:600" rel="stylesheet"><link rel="apple-touch-icon" sizes="180x180" href="823c43f254ce020ff5e2d94e07df3740.png"><link rel="icon" type="image/png" sizes="32x32" href="0136498344b8b0442d1be1d6d0a52567.png"><link rel="icon" type="image/png" sizes="16x16" href="868c56a02807ae8e26458457793e8dfe.png"><link rel="manifest" href="4c5f7ea3d58d57aebb05eccacc9401a9.js"><link rel="mask-icon" href="473b996da45a75a7b449ca8677d62d93.svg" color="#5bbad5"><meta name="theme-color" content="#ffffff"><script src="e9b86fb8b222339443e71e85f7fa5a56.js"></script><title>Barber Salon</title><link rel="stylesheet" href="e9b86fb8b222339443e71e85f7fa5a56.css"></head><body class="page"><div class="mainHeader"><div class="u-wrapper"><nav class="mainNavigation"><ul class="mainMenu"><li class="mainMenu__item"><a href="./" class="mainMenu__link -active">Home</a></li><li class="mainMenu__item"><a href="./" class="mainMenu__link">News</a></li><li class="mainMenu__item"><a href="./" class="mainMenu__link">Price</a></li><li class="mainMenu__item"><a href="./" class="mainMenu__link">Store</a></li><li class="mainMenu__item"><a href="./" class="mainMenu__link">Contact</a></li><li class="mainMenu__item -login"><a href="./" class="mainMenu__link -login">Login</a></li></ul></nav></div></div><main class="mainPage"><div class="hero"><div class="u-wrapper"><div class="heroMain"><h1 class="heroMain__title">Barbershop<span class="heroMain__subtitle">Moustache</span></h1></div><div class="heroHeadlines"><section class="heroHeadline"><p class="heroHeadline__title">Fast</p><p class="heroHeadline__paragraph">We will do our job fast! Two hours will pass unnoticed resulting in your new stylish haircut.</p></section><section class="heroHeadline"><p class="heroHeadline__title">Stylish</p><p class="heroHeadline__paragraph">Forget your previous haircuts. We will make a movie or a soccer star out of you. At least externally.</p></section><section class="heroHeadline"><p class="heroHeadline__title">Expensive</p><p class="heroHeadline__paragraph">Our professionals need proper rewards. Besides, doesn't price indicate a certain status?</p></section></div></div></div><div class="u-wrapper"><div class="info"><article class="info__article news"><h2 class="news__title">News</h2><div class="news__sections"><section class="news__section"><p class="news__paragraph">Our refreshments bar is finally open for you to enjoy during a haircut (P.S Third drink is on the house)</p><small class="news__date"><time datetime="01-18">18 January</time></small></section><section class="news__section"><p class="news__paragraph">Welcome new addition to our team, John &laquo;Fast-hand&raquo; Doe, owner of many internationally recognized awards</p><small class="news__date"><time datetime="01-11">11 January</time></small></section></div><div class="news__controls"><button title="All News" class="news__button">All News</button></div></article><article class="info__article gallery"><h2 class="gallery__title">Photo Gallery</h2><img class="gallery__image" src="a4949b0060a1587f321a317e532ef518.jpg" width="460" height="260" alt="Barber shop"><div class="gallery__controls"><button title="Back" class="gallery__button">Back</button><button title="Forward" class="gallery__button">Forward</button></div></article><article class="info__article contact"><h2 class="contact__title">Contact Information</h2><p class="contact__info">Barber Shop &laquo;Moustache&raquo;<br>Address: 7599 St Louis Lane Skokie, IL 60076<br>Telephone: 803-366-1197</p><p class="contact__schedule">Work Hours:<br>MON-FRI:<time datetime="10:00">10:00</time>&ndash;<time datetime="22:00">22:00</time><br>SUN-SAT:<time datetime="10:00">10:00</time>&ndash;<time datetime="19:00">19:00</time></p><div class="contact__controls"><button title="Directions" class="contact__button">Directions</button><button title="Contact Us" class="contact__button">Contact Us</button></div></article><article class="info__article registration"><form action="#" method="post" class="registration__form"><h2 class="registration__title">Registration</h2><p class="registration__info">After submission please expect a call from our personnel to confirm the registration</p><div class="registration__field"><label class="registration__label" for="date">Date</label><input class="registration__input" name="date" title="Date" id="date" type="date" placeholder="31/08/2018"></div><div class="registration__field"><label class="registration__label" for="time">Time</label><input class="registration__input" name="time" title="Time" id="time" type="time" placeholder="13:00" min="10:00" max="22:00"></div><div class="registration__field"><label class="registration__label" for="name">Your Name</label><input class="registration__input" name="name" title="Name" id="name" placeholder="John Doe"></div><div class="registration__field"><label class="registration__label" for="phone">Phone Number</label><input class="registration__input" name="phone" title="Phone" id="phone" placeholder="808-371-1210"></div><input title="Register" class="registration__button" type="submit" value="Register"></form></article></div></div></main></body></html>
+<!doctype html>
+<!--
+  ~ MIT License
+  ~
+  ~ Copyright (c) 2017 Anton Zdanov
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://fonts.googleapis.com/css?family=Cabin:600" rel="stylesheet">
+        <link rel="apple-touch-icon" sizes="180x180" href="/dist/823c43f254ce020ff5e2d94e07df3740.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/dist/0136498344b8b0442d1be1d6d0a52567.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/dist/868c56a02807ae8e26458457793e8dfe.png">
+        <link rel="manifest" href="/dist/4c5f7ea3d58d57aebb05eccacc9401a9.js">
+        <link rel="mask-icon" href="/dist/473b996da45a75a7b449ca8677d62d93.svg" color="#5bbad5">
+        <meta name="theme-color" content="#ffffff">
+        <meta name="format-detection" content="telephone=no">
+        <script src="/dist/e9b86fb8b222339443e71e85f7fa5a56.js"></script>
+        <title>Barber Salon</title>
+    <link rel="stylesheet" href="/dist/e9b86fb8b222339443e71e85f7fa5a56.css"></head>
+    <body class="page">
+        <div class="mainHeader">
+            <div class="u-wrapper">
+                <nav class="mainNavigation">
+                    <ul class="mainMenu">
+                        <li class="mainMenu__item"><a href="/dist" class="mainMenu__link -active">Home</a></li>
+                        <li class="mainMenu__item"><a href="/dist" class="mainMenu__link">News</a></li>
+                        <li class="mainMenu__item"><a href="/dist" class="mainMenu__link">Price</a></li>
+                        <li class="mainMenu__item"><a href="/dist" class="mainMenu__link">Store</a></li>
+                        <li class="mainMenu__item"><a href="/dist" class="mainMenu__link">Contact</a></li>
+                        <li class="mainMenu__item -login"><a href="/dist" class="mainMenu__link -login">Login</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <main class="mainPage">
+            <div class="hero">
+                <div class="u-wrapper">
+                    <div class="heroMain">
+                        <h1 class="heroMain__title">Barber Salon <span class="heroMain__subtitle">Moustache</span></h1>
+                    </div>
+                    <div class="heroHeadlines">
+                        <section class="heroHeadline">
+                            <p class="heroHeadline__title">Fast</p>
+                            <p class="heroHeadline__paragraph">We will do our job fast! Two hours will pass unnoticed
+                                resulting in your new stylish haircut.</p>
+                        </section>
+                        <section class="heroHeadline">
+                            <p class="heroHeadline__title">Stylish</p>
+                            <p class="heroHeadline__paragraph">Forget your previous haircuts. We will make a movie or a
+                                soccer star out of you. At least externally.</p>
+                        </section>
+                        <section class="heroHeadline">
+                            <p class="heroHeadline__title">Expensive</p>
+                            <p class="heroHeadline__paragraph">Our professionals need proper rewards. Besides, doesn't
+                                price indicate a certain status?</p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <div class="u-wrapper">
+                <div class="info">
+                    <article class="info__article news">
+                        <h2 class="news__title">News</h2>
+                        <div class="news__sections">
+                            <section class="news__section">
+                                <p class="news__paragraph">Our refreshments bar is finally open for you to enjoy during
+                                    a
+                                    haircut (P.S Third drink is on the house)</p>
+                                <small class="news__date">
+                                    <time datetime="01-18">18 January</time>
+                                </small>
+                            </section>
+                            <section class="news__section">
+                                <p class="news__paragraph">Welcome new addition to our team,
+                                    John &laquo;Fast-hand&raquo; Doe, owner of many internationally recognized awards
+                                </p>
+                                <small class="news__date">
+                                    <time datetime="01-11">11 January</time>
+                                </small>
+                            </section>
+                        </div>
+                        <div class="news__controls">
+                            <button title="All News" class="news__button">All News</button>
+                        </div>
+                    </article>
+                    <article class="info__article gallery">
+                        <h2 class="gallery__title">Gallery</h2>
+                        <!-- Root element of PhotoSwipe. Must have class pswp. -->
+                        <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+                            <!-- Background of PhotoSwipe.
+                                 It's a separate element as animating opacity is faster than rgba(). -->
+                            <div class="pswp__bg"></div>
+
+                            <!-- Slides wrapper with overflow:hidden. -->
+                            <div class="pswp__scroll-wrap">
+
+                                <!-- Container that holds slides.
+                                    PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                                    Don't modify these 3 pswp__item elements, data is added later on. -->
+                                <div class="pswp__container">
+                                    <div class="pswp__item"></div>
+                                    <div class="pswp__item"></div>
+                                    <div class="pswp__item"></div>
+                                </div>
+
+                                <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+                                <div class="pswp__ui pswp__ui--hidden">
+
+                                    <div class="pswp__top-bar">
+
+                                        <!--  Controls are self-explanatory. Order can be changed. -->
+
+                                        <div class="pswp__counter"></div>
+
+                                        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                                        <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                                        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                                        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                                        <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                                        <!-- element will get class pswp__preloader--active when preloader is running -->
+                                        <div class="pswp__preloader">
+                                            <div class="pswp__preloader__icn">
+                                                <div class="pswp__preloader__cut">
+                                                    <div class="pswp__preloader__donut"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                                        <div class="pswp__share-tooltip"></div>
+                                    </div>
+
+                                    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                                    </button>
+
+                                    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                                    </button>
+
+                                    <div class="pswp__caption">
+                                        <div class="pswp__caption__center"></div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="gallery__controls">
+                            <button title="Back" class="gallery__button">Back</button>
+                            <button title="Forward" class="gallery__button">Forward</button>
+                        </div>
+                    </article>
+                    <article class="info__article contact">
+                        <h2 class="contact__title">Contact</h2>
+                        <p class="contact__info">Barber Salon &laquo;Moustache&raquo;<br>
+                            Address: 7599 St Louis Lane Skokie, IL 60076<br>
+                            Telephone: 803-366-1197
+                        </p>
+                        <p class="contact__schedule">Work Hours:<br>
+                            MON-FRI:
+                            <time datetime="10:00">10:00</time>&ndash;<time datetime="22:00">22:00</time>
+                            <br>
+                            SUN-SAT:
+                            <time datetime="10:00">10:00</time>&ndash;<time datetime="19:00">19:00</time>
+                        </p>
+                        <div class="contact__controls">
+                            <button title="Directions" class="contact__button">Directions</button>
+                            <button title="Contact Us" class="contact__button">Contact Us</button>
+                        </div>
+                    </article>
+                    <article class="info__article registration">
+                        <form action="#" method="post" class="registration__form">
+                            <h2 class="registration__title">Registration</h2>
+                            <p class="registration__info">After submission please expect a call from our personnel to
+                                confirm the registration</p>
+                            <div class="registration__field">
+                                <label class="registration__label" for="date">Date</label>
+                                <input class="registration__input" name="date" title="Date" id="date" type="date" placeholder="31/08/2018">
+                            </div>
+                            <div class="registration__field">
+                                <label class="registration__label" for="time">Time</label>
+                                <input class="registration__input" name="time" title="Time" id="time" type="time" placeholder="13:00" min="10:00" max="22:00">
+                            </div>
+                            <div class="registration__field">
+                                <label class="registration__label" for="name">Name</label>
+                                <input class="registration__input" name="name" title="Name" id="name" type="text" placeholder="John Doe">
+                            </div>
+                            <div class="registration__field">
+                                <label class="registration__label" for="phone">Phone</label>
+                                <input class="registration__input" name="phone" title="Phone" id="phone" type="text" placeholder="808-371-1210">
+                            </div>
+                            <input title="Register" class="registration__button" type="submit" value="Register">
+                        </form>
+                    </article>
+                </div>
+            </div>
+            <footer class="footer">
+                <div class="u-wrapper">
+                    <div class="footer__items">
+                        <div class="footer__item footer__contact">
+                            <p class="footer__info">Barber Salon &laquo;Moustache&raquo;<br>
+                                Address: 7599 St Louis Lane Skokie, IL 60076<br>
+                                Telephone: 803-366-1197
+                            </p>
+                        </div>
+                        <div class="footer__item footer__social">
+                            <a href="#" title="Vkontakte" class="social__link -vk">VK</a>
+                            <a href="#" title="Facebook" class="social__link -facebook">Facebook</a>
+                            <a href="#" title="Instagram" class="social__link -instagram">Instagram</a>
+                        </div>
+                        <div class="footer__item footer__copyright">
+                            <small class="copyright__paragraph">&copy; 2018 Barber Salon Moustache</small>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </main>
+    </body>
+</html>
