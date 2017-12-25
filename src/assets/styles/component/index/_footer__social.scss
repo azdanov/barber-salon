@@ -24,6 +24,7 @@
     white-space: nowrap;
     width: 6rem;
     opacity: 0.8;
+    margin-left: 1rem;
 
     &.-vk {
         background: $lightColor $vkSocialLogo;
@@ -35,6 +36,10 @@
 
     &.-instagram {
         background: $lightColor $instagramSocialLogo;
+    }
+
+    &:first-child {
+        margin-left: 0;
     }
 
     &:hover,
