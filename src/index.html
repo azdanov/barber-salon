@@ -17,13 +17,14 @@
             content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link href="https://fonts.googleapis.com/css?family=Cabin:600" rel="stylesheet">
-        <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
-        <link rel="manifest" href="favicons/manifest.json">
-        <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+        <link rel="manifest" href="assets/favicons/manifest.json">
+        <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
         <meta name="theme-color" content="#ffffff">
-        <script src="scripts/index.js"></script>
+        <meta name="format-detection" content="telephone=no">
+        <script src="assets/scripts/index.js"></script>
         <title>Barber Salon</title>
     </head>
     <body class="page">
@@ -45,7 +46,7 @@
             <div class="hero">
                 <div class="u-wrapper">
                     <div class="heroMain">
-                        <h1 class="heroMain__title">Barbershop <span class="heroMain__subtitle">Moustache</span></h1>
+                        <h1 class="heroMain__title">Barber Salon <span class="heroMain__subtitle">Moustache</span></h1>
                     </div>
                     <div class="heroHeadlines">
                         <section class="heroHeadline">
@@ -93,17 +94,17 @@
                         </div>
                     </article>
                     <article class="info__article gallery">
-                        <h2 class="gallery__title">Photo Gallery</h2>
-                        <img class="gallery__image" src="images/barber-1453064_640.jpg" width="460" height="260"
-                            alt="Barber shop">
+                        <h2 class="gallery__title">Gallery</h2>
+                        <img class="gallery__image" src="assets/images/barber-1453064_640.jpg" width="460" height="260"
+                            alt="Barber salon">
                         <div class="gallery__controls">
                             <button title="Back" class="gallery__button">Back</button>
                             <button title="Forward" class="gallery__button">Forward</button>
                         </div>
                     </article>
                     <article class="info__article contact">
-                        <h2 class="contact__title">Contact Information</h2>
-                        <p class="contact__info">Barber Shop &laquo;Moustache&raquo;<br>
+                        <h2 class="contact__title">Contact</h2>
+                        <p class="contact__info">Barber Salon &laquo;Moustache&raquo;<br>
                             Address: 7599 St Louis Lane Skokie, IL 60076<br>
                             Telephone: 803-366-1197
                         </p>
@@ -135,12 +136,12 @@
                                     id="time" type="time" placeholder="13:00" min="10:00" max="22:00">
                             </div>
                             <div class="registration__field">
-                                <label class="registration__label" for="name">Your Name</label>
+                                <label class="registration__label" for="name">Name</label>
                                 <input class="registration__input" name="name" title="Name"
                                     id="name" type="text" placeholder="John Doe">
                             </div>
                             <div class="registration__field">
-                                <label class="registration__label" for="phone">Phone Number</label>
+                                <label class="registration__label" for="phone">Phone</label>
                                 <input class="registration__input" name="phone" title="Phone"
                                     id="phone" type="text" placeholder="808-371-1210">
                             </div>
@@ -149,6 +150,26 @@
                     </article>
                 </div>
             </div>
+            <footer class="footer">
+                <div class="u-wrapper">
+                    <div class="footer__items">
+                        <div class="footer__item footer__contact">
+                            <p class="footer__info">Barber Salon &laquo;Moustache&raquo;<br>
+                                Address: 7599 St Louis Lane Skokie, IL 60076<br>
+                                Telephone: 803-366-1197
+                            </p>
+                        </div>
+                        <div class="footer__item footer__social">
+                            <a href="#" title="Vkontakte" class="social__link -vk">VK</a>
+                            <a href="#" title="Facebook" class="social__link -facebook">Facebook</a>
+                            <a href="#" title="Instagram" class="social__link -instagram">Instagram</a>
+                        </div>
+                        <div class="footer__item footer__copyright">
+                            <small class="copyright__paragraph">&copy; 2018 Barber Salon Moustache</small>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </main>
     </body>
 </html>

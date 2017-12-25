@@ -18,7 +18,7 @@ $heightRatio: 2.6;
 
 .mainHeader {
     background-color: $darkColor;
-    width: 100vw;
+    width: 100%;
 }
 
 .mainNavigation {
@@ -26,7 +26,9 @@ $heightRatio: 2.6;
 }
 
 .mainMenu {
-    height: 13rem;
+    clear: both;
+    content: "";
+    display: table;
     margin: 0;
 }
 
@@ -35,14 +37,14 @@ $heightRatio: 2.6;
 
     &:nth-child(odd) {
         float: left;
-        padding: 0.5em;
+        padding: 1rem 0;
         text-align: center;
         width: 50%;
     }
 
     &:nth-child(even) {
         float: right;
-        padding: 0.5em;
+        padding: 1rem 0;
         width: 50%;
     }
 }
@@ -132,8 +134,9 @@ $heightRatio: 2.6;
     }
 
     .mainMenu {
-        display: flex;
-        height: calc(#{$heightRatio} * #{$fontSizeMenu} + 2 * #{$menuUnderlineSize});
+        height: calc(
+            #{$heightRatio} * #{$fontSizeMenu} + 2 * #{$menuUnderlineSize}
+        );
         padding-top: $menuUnderlineSize;
     }
 
@@ -141,6 +144,10 @@ $heightRatio: 2.6;
         font-size: $fontSizeMenu;
         margin-left: $marginMenu;
         align-items: left;
+
+        &:first-child {
+            margin-left: 0;
+        }
 
         &.-login {
             margin-left: auto;
@@ -152,7 +159,9 @@ $heightRatio: 2.6;
         border-bottom: $menuUnderlineSize solid transparent;
         display: inline-block;
         font-family: $fontFamilyCabin;
-        line-height: calc(#{$heightRatio} * #{$fontSizeMenu} - #{$menuUnderlineSize} + 0.25rem);
+        line-height: calc(
+            #{$heightRatio} * #{$fontSizeMenu} - #{$menuUnderlineSize} + 0.25rem
+        );
         text-decoration: none;
         text-transform: uppercase;
 

@@ -9,11 +9,17 @@
  *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-@import "index/header";
-@import "index/hero";
-@import "index/mainPage";
-@import "index/info";
-@import "index/news";
-@import "index/gallery";
-@import "index/contact";
-@import "index/registeration";
+
+.footer {
+    background-color: $darkColor;
+    color: white;
+    font-size: $textSize;
+}
+
+@media screen and (min-width: $medium) {
+    .footer__items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+    }
+}

@@ -13,17 +13,19 @@
 .mainPage {
     width: 100%;
     min-height: 100%;
-    background: black url('https://res.cloudinary.com/anton-zdanov/image/upload/q_auto/v1513960129/Artboard_1_0_25x_khmkll.jpg') no-repeat center top;
+    background: black
+        url("https://res.cloudinary.com/anton-zdanov/image/upload/q_auto/v1513960129/Artboard_1_0_25x_khmkll.jpg")
+        no-repeat center top;
 }
 
 @media screen and (min-width: 630px) {
     .mainPage {
-        background-image: url('https://res.cloudinary.com/anton-zdanov/image/upload/q_auto/v1513960129/Artboard_1_0_5x_oqkm20.jpg');
+        background-image: url("https://res.cloudinary.com/anton-zdanov/image/upload/q_auto/v1513960129/Artboard_1_0_5x_oqkm20.jpg");
     }
 }
 
 @media screen and (min-width: 1200px) {
     .mainPage {
-        background-image: url('https://res.cloudinary.com/anton-zdanov/image/upload/q_auto/v1513960129/Artboard_1_0_75x_grffgf.jpg');
+        background-image: url("https://res.cloudinary.com/anton-zdanov/image/upload/q_auto/v1513960129/Artboard_1_0_75x_grffgf.jpg");
     }
 }

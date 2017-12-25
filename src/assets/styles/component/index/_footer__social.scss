@@ -10,29 +10,35 @@
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-.gallery__title {
-    font-size: $titleSize;
+.footer__social {
     text-align: center;
-    text-transform: uppercase;
 }
 
-.gallery__image {
-    display: block;
-    margin: 0 auto;
-    max-width: $indexInfoWidth;
-    padding: 0.7rem 2%;
-    width: 100%;
-    object-fit: contain;
-}
+.social__link {
+    cursor: pointer;
+    display: inline-block;
+    height: 6rem;
+    overflow: hidden;
+    text-decoration: none;
+    text-indent: 100%;
+    white-space: nowrap;
+    width: 6rem;
+    opacity: 0.8;
 
-.gallery__controls {
-    display: flex;
-    justify-content: space-between;
-    margin: 3rem auto 1rem;
-    max-width: $indexInfoWidth;
-    padding: 0 2%;
-}
+    &.-vk {
+        background: $lightColor $vkSocialLogo;
+    }
 
-.gallery__button {
-    @include button($darkColor, $lightColor);
+    &.-facebook {
+        background: $lightColor $facebookSocialLogo;
+    }
+
+    &.-instagram {
+        background: $lightColor $instagramSocialLogo;
+    }
+
+    &:hover,
+    &:active {
+        opacity: 1;
+    }
 }

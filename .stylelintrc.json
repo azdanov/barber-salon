@@ -2,7 +2,7 @@
     "extends": "stylelint-config-standard",
     "rules": {
         "indentation": 4,
-        "at-rule-no-unknown": false,
-        "declaration-colon-newline-after": false
+        "declaration-colon-newline-after": null,
+        "at-rule-no-unknown": null
     }
 }
