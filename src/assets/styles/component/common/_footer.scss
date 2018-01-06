@@ -1,7 +1,7 @@
 /*!
  * MIT License
  *
- * Copyright (c) 2017 Anton Zdanov
+ * Copyright (c) 2018 Anton Zdanov
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
  *
@@ -9,6 +9,29 @@
  *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
+
+.footer {
+    background-color: $darkColor;
+    color: white;
+    font-family: $fontFamilyCabin;
+    font-size: $textSize;
+    max-height: 15rem;
+}
+
+.footer__contact {
+    text-align: center;
+}
+
+.footer__info {
+    padding-top: 1rem;
+}
+
+.footer__copyright {
+    font-family: sans-serif;
+    font-size: $textSize;
+    padding: 1rem 0;
+    text-align: center;
+}
 
 .footer__social {
     text-align: center;
@@ -18,13 +41,13 @@
     cursor: pointer;
     display: inline-block;
     height: 6rem;
+    margin-left: 1rem;
+    opacity: 0.8;
     overflow: hidden;
     text-decoration: none;
     text-indent: 100%;
     white-space: nowrap;
     width: 6rem;
-    opacity: 0.8;
-    margin-left: 1rem;
 
     &.-vk {
         background: $lightColor $vkSocialLogo;
@@ -45,5 +68,13 @@
     &:hover,
     &:active {
         opacity: 1;
+    }
+}
+
+@media screen and (min-width: $medium) {
+    .footer__items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
     }
 }
