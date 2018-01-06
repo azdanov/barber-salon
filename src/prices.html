@@ -34,7 +34,7 @@
                     <ul class="mainMenu">
                         <li class="mainMenu__item"><a href="#" class="mainMenu__link">Home</a></li>
                         <li class="mainMenu__item"><a href="#" class="mainMenu__link">News</a></li>
-                        <li class="mainMenu__item"><a href="price.html" class="mainMenu__link -active">Price</a></li>
+                        <li class="mainMenu__item"><a href="prices.html" class="mainMenu__link -active">Prices</a></li>
                         <li class="mainMenu__item"><a href="#" class="mainMenu__link">Store</a></li>
                         <li class="mainMenu__item"><a href="#" class="mainMenu__link">Contact</a></li>
                         <li class="mainMenu__item -login"><a href="#" class="mainMenu__link -login">Login</a></li>
@@ -44,27 +44,61 @@
         </div>
         <main class="mainPage">
             <div class="u-wrapper">
-                <div class="priceList">
-                    <h1 class="priceList__title">Price list</h1>
+                <article class="priceList">
+                    <h1 class="priceList__title">Price-list</h1>
                     <div class="breadCrumbs">
-                        <ul>
-                            <li class="breadCrumbs__item">Home</li>
-                            <li class="breadCrumbs__item">Price</li>
+                        <ul class="breadCrumbs__list">
+                            <li class="breadCrumbs__item"><a href="#" class="breadCrumbs__link">Home</a></li>
+                            <li class="breadCrumbs__item"><a href="#" class="breadCrumbs__link -active">Prices</a></li>
                         </ul>
                     </div>
-                    <p class="priceList__headline">True masculine classics</p>
-                    <div class="highLights">
-                        <div class="highLight__item">
-
-                        </div>
-                        <div class="highLight__item">
-
-                        </div>
-                        <div class="highLight__item">
-
-                        </div>
-                    </div>
-                </div>
+                    <p class="priceList__headline"><span class="u-padding">True masculine classics</span></p>
+                    <section class="highLights">
+                        <article class="highLight__item products">
+                            <h2 class="products__title">We use only the best products:</h2>
+                            <ul class="products__list">
+                                <li class="products__listItem">Lumberjack Hair Toner</li>
+                                <li class="products__listItem">Bear Power Shampoo</li>
+                                <li class="products__listItem">Spartan Tenacity Gel</li>
+                                <li class="products__listItem">G.I Joe Eau de Cologne</li>
+                            </ul>
+                        </article>
+                        <article class="highLight__item servicePrices">
+                            <h2 class="servicePrices__title">Price for our services:</h2>
+                            <table class="servicePrices__table">
+                                <tr class="servicePrices__row">
+                                    <td class="servicePrices__item">Haircut</td>
+                                    <td class="servicePrices__item">$30</td>
+                                </tr>
+                                <tr class="servicePrices__row">
+                                    <td class="servicePrices__item">Beard trim</td>
+                                    <td class="servicePrices__item">$15</td>
+                                </tr>
+                                <tr class="servicePrice__row">
+                                    <td class="servicePrices__item">Moustache work</td>
+                                    <td class="servicePrices__item">$10</td>
+                                </tr>
+                            </table>
+                        </article>
+                        <article class="highLight__item aboutUs">
+                            <section class="u-aboutUs__div">
+                                <h2 class="aboutUs__title">A few words about us:</h2>
+                                <p class="aboutUs__text">
+                                    Our hair salon is engaged exclusively in men's haircuts. For us grooming each client
+                                    is a unique and thoughtful work. We do not work for quantity, we strive for
+                                    quality.
+                                </p>
+                            </section>
+                            <section class="u-aboutUs__div">
+                                <p class="aboutUs__text">
+                                    Our workshop is located in the center of the city, so you can make a stylish haircut
+                                    at any time, even at lunchtime. Here you can dive into a comfortable atmosphere,
+                                    while our experts take care of all your needs.
+                                </p>
+                            </section>
+                        </article>
+                    </section>
+                </article>
             </div>
         </main>
         <footer class="footer">

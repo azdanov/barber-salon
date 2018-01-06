@@ -11,7 +11,7 @@
  */
 
 $marginMenu: 3rem;
-$fontSizeMenu: $textSize;
+$menuSize: $textSize;
 
 $menuUnderlineSize: 0.3rem;
 $heightRatio: 2.6;
@@ -33,7 +33,7 @@ $heightRatio: 2.6;
 }
 
 .mainMenu__item {
-    font-size: $fontSizeMenu;
+    font-size: $menuSize;
 
     &:nth-child(odd) {
         float: left;
@@ -57,6 +57,12 @@ $heightRatio: 2.6;
     &:link,
     &:visited {
         color: $lightColor;
+    }
+
+    &:hover,
+    &:active,
+    &.-active {
+        opacity: 0.8;
     }
 }
 
@@ -88,7 +94,7 @@ $heightRatio: 2.6;
         flex-flow: row wrap;
         align-items: center;
         align-content: space-around;
-        height: calc(#{$heightRatio * 1.5} * #{$fontSizeMenu});
+        height: calc(#{$heightRatio * 1.5} * #{$menuSize});
     }
 
     .mainMenu__item {
@@ -117,10 +123,10 @@ $heightRatio: 2.6;
 
         &.-login::before {
             background-image: $loginEnterIcon;
-            background-size: 2rem calc(#{$fontSizeMenu} - 0.5rem);
+            background-size: 2rem calc(#{$menuSize} - 0.5rem);
             content: "";
             display: inline-block;
-            height: calc(#{$fontSizeMenu} - 0.5rem);
+            height: calc(#{$menuSize} - 0.5rem);
             margin-right: 1rem;
             opacity: 0.3;
             width: 2rem;
@@ -134,14 +140,12 @@ $heightRatio: 2.6;
     }
 
     .mainMenu {
-        height: calc(
-            #{$heightRatio} * #{$fontSizeMenu} + 2 * #{$menuUnderlineSize}
-        );
+        height: calc(#{$heightRatio} * #{$menuSize} + 2 * #{$menuUnderlineSize});
         padding-top: $menuUnderlineSize;
     }
 
     .mainMenu__item {
-        font-size: $fontSizeMenu;
+        font-size: $menuSize;
         margin-left: $marginMenu;
         align-items: left;
 
@@ -159,18 +163,16 @@ $heightRatio: 2.6;
         border-bottom: $menuUnderlineSize solid transparent;
         display: inline-block;
         font-family: $fontFamilyCabin;
-        line-height: calc(
-            #{$heightRatio} * #{$fontSizeMenu} - #{$menuUnderlineSize} + 0.25rem
-        );
+        line-height: calc(#{$heightRatio} * #{$menuSize} - #{$menuUnderlineSize} + 0.25rem);
         text-decoration: none;
         text-transform: uppercase;
 
         &.-login::before {
             background-image: $loginEnterIcon;
-            background-size: 2rem calc(#{$fontSizeMenu} - 0.5rem);
+            background-size: 2rem calc(#{$menuSize} - 0.5rem);
             content: "";
             display: inline-block;
-            height: calc(#{$fontSizeMenu} - 0.5rem);
+            height: calc(#{$menuSize} - 0.5rem);
             margin-right: 1rem;
             opacity: 0.3;
             width: 2rem;
