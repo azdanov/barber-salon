@@ -10,12 +10,24 @@
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-.mainPage {
-    width: 100%;
-    background: black;
-    font-family: $fontFamilyCabin;
+.servicePrices__title {
+    font-size: $titleSize;
 }
 
-.highLights {
-    font-size: $textSize;
+.servicePrices__table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.servicePrices__table,
+.servicePrices__item {
+    border: 1px solid black;
+    padding: 1.15rem 1.5rem;
+    table-layout: fixed;
+    width: 100%;
+    font-variant: small-caps;
+}
+
+.servicePrices__item:nth-of-type(n + 2) {
+    text-align: center;
 }

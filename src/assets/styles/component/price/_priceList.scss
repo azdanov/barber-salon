@@ -56,13 +56,14 @@
 
 .priceList__headline {
     font-size: calc(#{$titleSize});
-    text-align: center;
+    text-align: left;
     text-transform: uppercase;
 }
 
 @media screen and (min-width: 560px) {
     .priceList__headline {
         font-size: calc(#{$titleSize});
+        text-align: center;
         border-bottom: 0.2rem solid $darkColor;
         line-height: 0;
         padding: 0;
