@@ -11,119 +11,124 @@
   ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
   -->
 <html lang="en" class="root">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport"
-            content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link href="https://fonts.googleapis.com/css?family=Cabin:600" rel="stylesheet">
-        <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
-        <link rel="manifest" href="assets/favicons/manifest.json">
-        <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
-        <meta name="theme-color" content="#ffffff">
-        <meta name="format-detection" content="telephone=no">
-        <link rel="stylesheet" href="assets/styles/price.scss">
-        <title>Barber Salon - Price</title>
-    </head>
-    <body class="page">
-        <div class="mainHeader">
-            <div class="u-wrapper">
-                <nav class="mainNavigation">
-                    <ul class="mainMenu">
-                        <li class="mainMenu__item"><a href="#" class="mainMenu__link">Home</a></li>
-                        <li class="mainMenu__item"><a href="#" class="mainMenu__link">News</a></li>
-                        <li class="mainMenu__item"><a href="prices.html"
-                            class="mainMenu__link -active">Prices</a></li>
-                        <li class="mainMenu__item"><a href="#" class="mainMenu__link">Store</a></li>
-                        <li class="mainMenu__item"><a href="#" class="mainMenu__link">Contact</a>
-                        </li>
-                        <li class="mainMenu__item -login"><a href="#" class="mainMenu__link -login">Login</a>
-                        </li>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:600" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicons/manifest.json">
+    <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="assets/styles/price.scss">
+    <title>Barber Salon - Price</title>
+</head>
+<body class="page">
+<header class="mainHeader">
+    <div class="u-wrapper">
+        <nav class="mainNavigation">
+            <ul class="mainMenu">
+                <li class="mainMenu__item">
+                    <a href="#" class="mainMenu__link">Home</a></li>
+                <li class="mainMenu__item">
+                    <a href="#" class="mainMenu__link">News</a></li>
+                <li class="mainMenu__item">
+                    <a href="prices.html" class="mainMenu__link -active">Prices</a>
+                </li>
+                <li class="mainMenu__item">
+                    <a href="#" class="mainMenu__link">Store</a></li>
+                <li class="mainMenu__item">
+                    <a href="#" class="mainMenu__link">Contact</a>
+                </li>
+                <li class="mainMenu__item -login">
+                    <a href="#" class="mainMenu__link -login">Login</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main class="mainPage">
+    <div class="u-wrapper">
+        <article class="priceList">
+            <h1 class="mainPage__title">Price-list</h1>
+            <div class="breadCrumbs">
+                <ul class="breadCrumbs__list">
+                    <li class="breadCrumbs__item">
+                        <a href="#" class="breadCrumbs__link">Home</a>
+                    </li>
+                    <li class="breadCrumbs__item">
+                        <a href="#" class="breadCrumbs__link -active">Prices</a>
+                    </li>
+                </ul>
+            </div>
+            <p class="priceList__headline"><span
+                class="u-padding">True masculine classics</span></p>
+            <section class="highLights">
+                <article class="highLight__item products">
+                    <h2 class="products__title">We use the best products:</h2>
+                    <ul class="products__list">
+                        <li class="products__listItem">Lumberjack Hair Toner</li>
+                        <li class="products__listItem">Bear Power Shampoo</li>
+                        <li class="products__listItem">Spartan Tenacity Gel</li>
+                        <li class="products__listItem">G.I Joe Eau de Cologne</li>
                     </ul>
-                </nav>
+                </article>
+                <article class="highLight__item servicePrices">
+                    <h2 class="servicePrices__title">Price for our services:</h2>
+                    <table class="servicePrices__table">
+                        <tr class="servicePrices__row">
+                            <td class="servicePrices__item">Haircut</td>
+                            <td class="servicePrices__item">$30</td>
+                        </tr>
+                        <tr class="servicePrices__row">
+                            <td class="servicePrices__item">Beard trim</td>
+                            <td class="servicePrices__item">$15</td>
+                        </tr>
+                        <tr class="servicePrice__row">
+                            <td class="servicePrices__item">Moustache work</td>
+                            <td class="servicePrices__item">$10</td>
+                        </tr>
+                    </table>
+                </article>
+                <article class="highLight__item aboutUs">
+                    <h2 class="aboutUs__title">A few words about us:</h2>
+                    <p class="aboutUs__text">
+                        Our hair salon is engaged exclusively in men's haircuts. For us grooming
+                        each client is an unique and thoughtful work. We do not work for quantity,
+                        we strive for quality.
+                    </p>
+                    <p class="aboutUs__text">
+                        Our workshop is located in the center of the city, so you can make a stylish
+                        haircut at any time, even at lunchtime. Here you can dive into a comfortable
+                        atmosphere, while our experts take care of all your needs.
+                    </p>
+                </article>
+            </section>
+        </article>
+    </div>
+</main>
+<footer class="footer">
+    <div class="u-wrapper">
+        <div class="footer__items">
+            <div class="footer__item footer__contact">
+                <p class="footer__info">Barber Salon &laquo;Moustache&raquo;<br>
+                    Address: 7599 St Louis Lane Skokie, IL 60076<br>
+                    Telephone: 803-366-1197
+                </p>
+            </div>
+            <div class="footer__item footer__social">
+                <a href="#" title="Vkontakte" class="social__link -vk">VK</a>
+                <a href="#" title="Facebook" class="social__link -facebook">Facebook</a>
+                <a href="#" title="Instagram" class="social__link -instagram">Instagram</a>
+            </div>
+            <div class="footer__item footer__copyright">
+                <small class="copyright__paragraph">&copy; 2018 Barber Salon Moustache</small>
             </div>
         </div>
-        <main class="mainPage">
-            <div class="u-wrapper">
-                <article class="priceList">
-                    <h1 class="priceList__title">Price-list</h1>
-                    <div class="breadCrumbs">
-                        <ul class="breadCrumbs__list">
-                            <li class="breadCrumbs__item"><a href="#"
-                                class="breadCrumbs__link">Home</a></li>
-                            <li class="breadCrumbs__item"><a href="#"
-                                class="breadCrumbs__link -active">Prices</a></li>
-                        </ul>
-                    </div>
-                    <p class="priceList__headline"><span
-                        class="u-padding">True masculine classics</span></p>
-                    <section class="highLights">
-                        <article class="highLight__item products">
-                            <h2 class="products__title">We use the best products:</h2>
-                            <ul class="products__list">
-                                <li class="products__listItem">Lumberjack Hair Toner</li>
-                                <li class="products__listItem">Bear Power Shampoo</li>
-                                <li class="products__listItem">Spartan Tenacity Gel</li>
-                                <li class="products__listItem">G.I Joe Eau de Cologne</li>
-                            </ul>
-                        </article>
-                        <article class="highLight__item servicePrices">
-                            <h2 class="servicePrices__title">Price for our services:</h2>
-                            <table class="servicePrices__table">
-                                <tr class="servicePrices__row">
-                                    <td class="servicePrices__item">Haircut</td>
-                                    <td class="servicePrices__item">$30</td>
-                                </tr>
-                                <tr class="servicePrices__row">
-                                    <td class="servicePrices__item">Beard trim</td>
-                                    <td class="servicePrices__item">$15</td>
-                                </tr>
-                                <tr class="servicePrice__row">
-                                    <td class="servicePrices__item">Moustache work</td>
-                                    <td class="servicePrices__item">$10</td>
-                                </tr>
-                            </table>
-                        </article>
-                        <article class="highLight__item aboutUs">
-                            <h2 class="aboutUs__title">A few words about us:</h2>
-                            <p class="aboutUs__text">
-                                Our hair salon is engaged exclusively in men's haircuts. For us
-                                grooming each client is an unique and thoughtful work. We do not
-                                work for quantity, we strive for quality.
-                            </p>
-                            <p class="aboutUs__text">
-                                Our workshop is located in the center of the city, so you can
-                                make a stylish haircut at any time, even at lunchtime. Here you
-                                can dive into a comfortable atmosphere, while our experts take
-                                care of all your needs.
-                            </p>
-                        </article>
-                    </section>
-                </article>
-            </div>
-        </main>
-        <footer class="footer">
-            <div class="u-wrapper">
-                <div class="footer__items">
-                    <div class="footer__item footer__contact">
-                        <p class="footer__info">Barber Salon &laquo;Moustache&raquo;<br>
-                            Address: 7599 St Louis Lane Skokie, IL 60076<br>
-                            Telephone: 803-366-1197
-                        </p>
-                    </div>
-                    <div class="footer__item footer__social">
-                        <a href="#" title="Vkontakte" class="social__link -vk">VK</a>
-                        <a href="#" title="Facebook" class="social__link -facebook">Facebook</a>
-                        <a href="#" title="Instagram" class="social__link -instagram">Instagram</a>
-                    </div>
-                    <div class="footer__item footer__copyright">
-                        <small class="copyright__paragraph">&copy; 2018 Barber Salon Moustache
-                        </small>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </body>
+    </div>
+</footer>
+</body>
 </html>

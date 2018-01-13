@@ -19,3 +19,43 @@
 .highLights {
     font-size: $textSize;
 }
+
+.mainPage__title {
+    font-size: $titleSize;
+    text-transform: uppercase;
+}
+
+.breadCrumbs__list {
+    padding: 0;
+}
+
+.breadCrumbs__item {
+    display: inline-block;
+    font-size: $textSize;
+    text-transform: uppercase;
+
+    & .breadCrumbs__link {
+        text-decoration: none;
+
+        &:link,
+        &:visited {
+            color: $darkColor;
+        }
+
+        &:hover,
+        &.-active {
+            opacity: 0.8;
+        }
+    }
+
+    &:nth-child(n + 2)::before {
+        background-color: black;
+        content: "";
+        display: inline-block;
+        height: 0.8rem;
+        margin: 0 1rem 0.3rem;
+        transform: rotate(45deg);
+        width: 0.8rem;
+    }
+}
+
