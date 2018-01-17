@@ -1,6 +1,6 @@
 {
     "name": "barber-salon",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "description": "Barber Salon website template",
     "main": "index.js",
     "repository": "git@github.com:azdanov/barber-salon.git",
@@ -16,7 +16,6 @@
         "sanitize.css": "^5.0.0"
     },
     "scripts": {
-        "predeploy": "run-s clean lint build",
         "deploy": "gh-pages -d dist",
         "prelint:css": "prettier --write src/**/*.{scss,css}",
         "start": "parcel src/index.html",

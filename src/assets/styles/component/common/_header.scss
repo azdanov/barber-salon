@@ -64,6 +64,10 @@ $heightRatio: 2.6;
     &.-active {
         opacity: 0.8;
     }
+
+    &.-disable {
+        cursor: not-allowed;
+    }
 }
 
 @media screen and (max-width: #{$medium - 1}) {
@@ -80,7 +84,9 @@ $heightRatio: 2.6;
         &:hover::after,
         &:active::after,
         &:hover::before,
-        &:active::before {
+        &:active::before,
+        &.-active::after,
+        &.-active::before {
             background-image: $diamondShapeIcon;
             background-size: 100% 100%;
         }
@@ -140,7 +146,9 @@ $heightRatio: 2.6;
     }
 
     .mainMenu {
-        height: calc(#{$heightRatio} * #{$menuSize} + 2 * #{$menuUnderlineSize});
+        height: calc(
+            #{$heightRatio} * #{$menuSize} + 2 * #{$menuUnderlineSize}
+        );
         padding-top: $menuUnderlineSize;
     }
 
@@ -163,7 +171,9 @@ $heightRatio: 2.6;
         border-bottom: $menuUnderlineSize solid transparent;
         display: inline-block;
         font-family: $fontFamilyCabin;
-        line-height: calc(#{$heightRatio} * #{$menuSize} - #{$menuUnderlineSize} + 0.25rem);
+        line-height: calc(
+            #{$heightRatio} * #{$menuSize} - #{$menuUnderlineSize} + 0.25rem
+        );
         text-decoration: none;
         text-transform: uppercase;
 

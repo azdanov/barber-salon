@@ -10,14 +10,41 @@
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-.mainPage {
-    width: 100%;
-    background: black;
-    font-family: $fontFamilyCabin;
+.breadCrumbs {
+    grid-column: 1 / -1;
 }
 
-.mainPage__title {
-    font-size: $titleSize;
+.breadCrumbs__list {
+    padding: 0;
+    grid-row: 2;
+}
+
+.breadCrumbs__item {
+    display: inline-block;
+    font-size: $textSize;
     text-transform: uppercase;
-    grid-column: 1 / -1;
+
+    & .breadCrumbs__link {
+        text-decoration: none;
+
+        &:link,
+        &:visited {
+            color: $darkColor;
+        }
+
+        &:hover,
+        &.-active {
+            opacity: 0.8;
+        }
+    }
+
+    &:nth-child(n + 2)::before {
+        background-color: black;
+        content: "";
+        display: inline-block;
+        height: 0.8rem;
+        margin: 0 1rem 0.3rem;
+        transform: rotate(45deg);
+        width: 0.8rem;
+    }
 }

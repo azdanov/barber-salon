@@ -10,48 +10,79 @@
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-.productSelector {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, auto);
+.productList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    grid-row: 3;
+    grid-column: 2;
 }
 
-.brands__title,
-.types__title {
-    font-size: $titleSize;
-    margin: 1.5rem auto 2rem;
-}
+.productItem {
+    width: 22rem;
+    margin: 4rem 0.5rem 2rem;
+    box-shadow: 0 0 0.3rem 0 rgba(0, 0, 0, 0.33);
+    background-color: white;
 
-.brands__label,
-.types__label {
-    font-variant: small-caps;
-    margin-left: 1rem;
-}
-
-.brands__group,
-.types__group {
-    margin: 1rem 0;
-}
-
-.brands__input {
-    color: $darkColor;
-}
-
-.productSelector__button {
-    @include button($darkColor, $lightColor);
-
-    font-size: $textSize;
-    margin: 2rem 6rem 0;
-    grid-column: 1 / -1;
-}
-
-@media screen and (min-width: $medium) {
-    .productSelector {
-        grid-template-columns: 1fr;
-        grid-template-rows: 25rem 22rem 10rem;
+    .productItem__description {
+        margin: 1.5rem 2rem 0;
     }
 
-    .productSelector__button {
-        margin: 2rem 0;
+    .productItem__name {
+        margin: 0 2rem;
+        font-variant: small-caps;
+    }
+
+    .productItem__priceGroup {
+        padding: 1rem 2rem;
+        display: flex;
+    }
+}
+
+.priceGroup__price {
+    background-color: darken($lightColor, 10%);
+    padding: 0.8rem 2.5rem;
+    display: inline-block;
+}
+
+.priceGroup__buy {
+    @include button($darkColor, $lightColor);
+
+    width: 100%;
+    font-size: $textSize;
+}
+
+.productList__pagination {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    width: 100%;
+}
+
+.pagination__item {
+    @include button($darkColor, $lightColor);
+
+    margin: 0 1rem;
+    font-size: $textSize;
+    display: inline-block;
+}
+
+.pagination__link {
+    text-decoration: none;
+
+    &:link,
+    &:visited {
+        color: $lightColor;
+    }
+
+    &:hover,
+    &:active {
+        color: lighten($lightColor, 15%);
+    }
+}
+
+@media screen and (min-width: $large) {
+    .productList {
+        padding: 0 5rem;
     }
 }

@@ -15,3 +15,11 @@
     padding: 1rem 2%;
     font-size: $textSize;
 }
+
+@media screen and (min-width: $medium) {
+    .careProducts {
+        display: grid;
+        grid-template-columns: 2fr 5fr;
+        grid-template-rows: repeat(3, auto);
+    }
+}
