@@ -1,0 +1,1230 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2017 Anton Zdanov
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+/*! sanitize.css v5.0.0 | CC0 License | github.com/jonathantneal/sanitize.css */
+/* Document (https://html.spec.whatwg.org/multipage/semantics.html#semantics)
+   ========================================================================== */
+/**
+ * 1. Remove repeating backgrounds in all browsers (opinionated).
+ * 2. Add box sizing inheritence in all browsers (opinionated).
+ */
+*,
+::before,
+::after {
+  background-repeat: no-repeat;
+  /* 1 */
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  /* 2 */ }
+
+/**
+ * 1. Add text decoration inheritance in all browsers (opinionated).
+ * 2. Add vertical alignment inheritence in all browsers (opinionated).
+ */
+::before,
+::after {
+  text-decoration: inherit;
+  /* 1 */
+  vertical-align: inherit;
+  /* 2 */ }
+
+/**
+ * 1. Add border box sizing in all browsers (opinionated).
+ * 2. Add the default cursor in all browsers (opinionated).
+ * 3. Prevent font size adjustments after orientation changes in IE and iOS.
+ */
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  cursor: default;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 3 */
+  -webkit-text-size-adjust: 100%;
+  /* 3 */ }
+
+/* Sections (https://html.spec.whatwg.org/multipage/semantics.html#sections)
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block; }
+
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body {
+  margin: 0; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: .67em 0; }
+
+/* Grouping content (https://html.spec.whatwg.org/multipage/semantics.html#grouping-content)
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block; }
+
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+ * Remove the list style on navigation lists in all browsers (opinionated).
+ */
+nav ol,
+nav ul {
+  list-style: none; }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Text-level semantics (https://html.spec.whatwg.org/multipage/semantics.html#text-level-semantics)
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */ }
+
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+  font-weight: inherit; }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ffff00;
+  color: #000000; }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -.25em; }
+
+sup {
+  top: -.5em; }
+
+/*
+ * Remove the text shadow on text selections (opinionated).
+ * 1. Restore the coloring undone by defining the text shadow (opinionated).
+ */
+::-moz-selection {
+  background-color: #b3d4fc;
+  /* 1 */
+  color: #000000;
+  /* 1 */
+  text-shadow: none; }
+
+::selection {
+  background-color: #b3d4fc;
+  /* 1 */
+  color: #000000;
+  /* 1 */
+  text-shadow: none; }
+
+/* Embedded content (https://html.spec.whatwg.org/multipage/embedded-content.html#embedded-content)
+   ========================================================================== */
+/*
+ * Change the alignment on media elements in all browers (opinionated).
+ */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle; }
+
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+video {
+  display: inline-block; }
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none; }
+
+/**
+ * Change the fill color to match the text color in all browsers (opinionated).
+ */
+svg {
+  fill: currentColor; }
+
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Tabular data (https://html.spec.whatwg.org/multipage/tables.html#tables)
+   ========================================================================== */
+/**
+ * Collapse border spacing
+ */
+table {
+  border-collapse: collapse; }
+
+/* Forms (https://html.spec.whatwg.org/multipage/forms.html#forms)
+   ========================================================================== */
+/**
+ * Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0; }
+
+/**
+ * Inherit styling in all browsers (opinionated).
+ */
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit; }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */ }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * 1. Remove the default vertical scrollbar in IE.
+ * 2. Change the resize direction on textareas in all browsers (opinionated).
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  resize: vertical;
+  /* 2 */ }
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"],
+[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive elements (https://html.spec.whatwg.org/multipage/forms.html#interactive-elements)
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+details,
+menu {
+  display: block; }
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item; }
+
+/* Scripting (https://html.spec.whatwg.org/multipage/scripting.html#scripting-3)
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+canvas {
+  display: inline-block; }
+
+/**
+ * Add the correct display in IE.
+ */
+template {
+  display: none; }
+
+/* User interaction (https://html.spec.whatwg.org/multipage/interaction.html#editing)
+   ========================================================================== */
+/*
+ * Remove the tapping delay on clickable elements (opinionated).
+ * 1. Remove the tapping delay in IE 10.
+ */
+a,
+area,
+button,
+input,
+label,
+select,
+summary,
+textarea,
+[tabindex] {
+  -ms-touch-action: manipulation;
+  /* 1 */
+  touch-action: manipulation; }
+
+/**
+ * Add the correct display in IE 10-.
+ */
+[hidden] {
+  display: none; }
+
+/* ARIA (https://w3c.github.io/html-aria/)
+   ========================================================================== */
+/**
+ * Change the cursor on busy elements (opinionated).
+ */
+[aria-busy="true"] {
+  cursor: progress; }
+
+/*
+ * Change the cursor on control elements (opinionated).
+ */
+[aria-controls] {
+  cursor: pointer; }
+
+/*
+ * Change the display on visually hidden accessible elements (opinionated).
+ */
+[aria-hidden="false"][hidden]:not(:focus) {
+  clip: rect(0, 0, 0, 0);
+  display: inherit;
+  position: absolute; }
+
+/*
+ * Change the cursor on disabled, not-editable, or otherwise
+ * inoperable elements (opinionated).
+ */
+[aria-disabled] {
+  cursor: default; }
+
+/*!
+ * MIT License
+ *
+ * Copyright (c) 2017 Anton Zdanov
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+/*!
+ * MIT License
+ *
+ * Copyright (c) 2017 Anton Zdanov
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+.root {
+  font-size: 62.5%; }
+
+/*!
+ * MIT License
+ *
+ * Copyright (c) 2017 Anton Zdanov
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+/*!
+ * MIT License
+ *
+ * Copyright (c) 2017 Anton Zdanov
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+.u-wrapper {
+  margin: 0 auto;
+  max-width: 98%;
+  padding: 0 2%; }
+
+@media screen and (min-width: 768px) {
+  .u-wrapper {
+    max-width: 768px; } }
+
+@media screen and (min-width: 992px) {
+  .u-wrapper {
+    max-width: 992px; } }
+
+/*!
+ * MIT License
+ *
+ * Copyright (c) 2017 Anton Zdanov
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+/*!
+ * MIT License
+ *
+ * Copyright (c) 2018 Anton Zdanov
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+/*!
+ * MIT License
+ *
+ * Copyright (c) 2018 Anton Zdanov
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+.root {
+  background-color: #212121; }
+
+.page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.footer {
+  margin-top: auto; }
+
+/*!
+ * MIT License
+ *
+ * Copyright (c) 2018 Anton Zdanov
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+.mainHeader {
+  background-color: #212121;
+  width: 100%; }
+
+.mainNavigation {
+  width: 100%; }
+
+.mainMenu {
+  clear: both;
+  content: "";
+  display: table;
+  margin: 0; }
+
+.mainMenu__item {
+  font-size: 2rem; }
+  .mainMenu__item:nth-child(odd) {
+    float: left;
+    padding: 1rem 0;
+    text-align: center;
+    width: 50%; }
+  .mainMenu__item:nth-child(even) {
+    float: right;
+    padding: 1rem 0;
+    width: 50%; }
+
+.mainMenu__link {
+  font-family: "Cabin", sans-serif;
+  text-decoration: none;
+  text-transform: uppercase; }
+  .mainMenu__link:link, .mainMenu__link:visited {
+    color: #fafafa; }
+  .mainMenu__link:hover, .mainMenu__link:active, .mainMenu__link.-active {
+    opacity: 0.8; }
+  .mainMenu__link.-disable {
+    cursor: not-allowed; }
+
+@media screen and (max-width: 767px) {
+  .mainMenu__link::after, .mainMenu__link::before {
+    content: "";
+    display: inline-block;
+    height: 1.5rem;
+    margin: 0 0.75rem;
+    width: 1rem; }
+  .mainMenu__link:hover::after, .mainMenu__link:active::after, .mainMenu__link:hover::before, .mainMenu__link:active::before, .mainMenu__link.-active::after, .mainMenu__link.-active::before {
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjQwLjczMXB4IiBoZWlnaHQ9IjQwLjczMXB4IiB2aWV3Qm94PSIwIDAgNDAuNzMxIDQwLjczMSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+PHBhdGggc3R5bGU9ImZpbGw6I2ZhZmFmYTsiIGQ9Ik0zNy43NjEsMTkuODMzYzAuMTE0LDAuMTY0LDAuMTg0LDAuMzYzLDAuMTg0LDAuNTc4YzAsMC40MzEtMC4yNzEsMC43OTctMC42NTMsMC45MzhjLTEuNTQ2LDEuMDk2LTkuODIsNy4zMDctMTYuMDE2LDE4LjczM2MtMC4xMjIsMC4zMDQtMC4zNzgsMC41NDgtMC43LDAuNjIxYy0wLjA4NCwwLjAyMS0wLjE2OCwwLjAyNy0wLjI1MiwwLjAyN2MtMC4zMzksMC0wLjY1Ni0wLjE1Ni0wLjgzMi0wLjQ1M2MtMC4wNDctMC4wNy0wLjA4NC0wLjE0Ni0wLjExMi0wLjIyOGMtMC44MDQtMS41Ni02LjEzMi0xMS40MjItMTUuOTg0LTE4Ljc1NmMtMC4zNTgtMC4xNTItMC42MDgtMC41MDctMC42MDgtMC45MjFjMC0wLjAwOCwwLTAuMDE2LDAtMC4wMjJjLTAuMDA0LTAuMTksMC4wNDUtMC4zODEsMC4xNDktMC41NDljMC4xMTgtMC4xOSwwLjI5NS0wLjMzMywwLjQ5OS0wLjQxYzEuMjc5LTAuODk0LDkuNjQ5LTcuMDIyLDE1Ljk2NS0xOC42MTJDMTkuNDk5LDAuMzM0LDE5Ljg5OSwwLDIwLjM3NiwwYzAuMTk2LDAsMC4zNzksMC4wNTcsMC41MzMsMC4xNTRjMC4yMTMsMC4xMiwwLjM3NiwwLjMxNiwwLjQ1NSwwLjU1M2MwLjYxMywxLjIwOSw1LjkzOCwxMS4zMTgsMTYuMDQsMTguODAyQzM3LjU0OCwxOS41ODcsMzcuNjcyLDE5LjY5OCwzNy43NjEsMTkuODMzeiIvPjwvZz48L3N2Zz4=);
+    background-size: 100% 100%; } }
+
+@media screen and (min-width: 425px) {
+  .mainMenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: distribute;
+        align-content: space-around;
+    height: calc(3.9 * 2rem); }
+  .mainMenu__item:nth-child(odd) {
+    padding: 0;
+    text-align: left;
+    width: auto; }
+  .mainMenu__item:nth-child(even) {
+    padding: 0;
+    width: auto; } }
+
+@media screen and (min-width: 643px) {
+  .mainMenu__item:last-child {
+    margin-left: auto; }
+  .mainMenu__link.-login::after {
+    background-image: initial; }
+  .mainMenu__link.-login::before {
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjU3OS4xOTNweCIgaGVpZ2h0PSI1NzkuMTkzcHgiIHZpZXdCb3g9IjAgMCA1NzkuMTkzIDU3OS4xOTMiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPjxnPjxnPjxwYXRoIHN0eWxlPSJmaWxsOiNmYWZhZmE7IiBkPSJNNTIxLjI1OSwwLjVIMjYwLjY5NWMtMTEuODMsMC0yMS40Miw5LjU5LTIxLjQyLDIxLjQyczkuNTksMjEuNDIsMjEuNDIsMjEuNDJoMjU1LjkxOHY0OTIuNTE0SDI2MS41MDFjLTExLjgzLDAtMjEuNDIsOS41OS0yMS40MiwyMS40MnM5LjU5LDIxLjQyLDIxLjQyLDIxLjQyaDI1OS43NTdjMjEuMDYxLDAsMzguMTk0LTE3LjEzNCwzOC4xOTQtMzguMTk0VjM4LjY5NEM1NTkuNDUzLDE3LjYzNCw1NDIuMzE5LDAuNSw1MjEuMjU5LDAuNXoiLz48cGF0aCBzdHlsZT0iZmlsbDojZmFmYWZhOyIgZD0iTTUyMS4yNTksNTc5LjE5M0gyNjEuNTAxYy0xMi4wODcsMC0yMS45Mi05LjgzMy0yMS45Mi0yMS45MnM5LjgzMy0yMS45MiwyMS45Mi0yMS45MmgyNTQuNjEyVjQzLjg0SDI2MC42OTVjLTEyLjA4NywwLTIxLjkyLTkuODMzLTIxLjkyLTIxLjkyUzI0OC42MDgsMCwyNjAuNjk1LDBoMjYwLjU2NGMyMS4zMzYsMCwzOC42OTQsMTcuMzU4LDM4LjY5NCwzOC42OTR2NTAxLjgwNUM1NTkuOTUzLDU2MS44MzUsNTQyLjU5NSw1NzkuMTkzLDUyMS4yNTksNTc5LjE5M3ogTTI2MS41MDEsNTM2LjM1NGMtMTEuNTM1LDAtMjAuOTIsOS4zODUtMjAuOTIsMjAuOTJzOS4zODUsMjAuOTIsMjAuOTIsMjAuOTJoMjU5Ljc1N2MyMC43ODUsMCwzNy42OTQtMTYuOTA5LDM3LjY5NC0zNy42OTRWMzguNjk0QzU1OC45NTMsMTcuOTEsNTQyLjA0NCwxLDUyMS4yNTksMUgyNjAuNjk1Yy0xMS41MzUsMC0yMC45Miw5LjM4NS0yMC45MiwyMC45MnM5LjM4NSwyMC45MiwyMC45MiwyMC45MmgyNTYuNDE4djQ5My41MTRIMjYxLjUwMXoiLz48L2c+PGc+PHBhdGggc3R5bGU9ImZpbGw6I2ZhZmFmYTsiIGQ9Ik0xOS43NCwyMjYuNzAxdjEyMi4yNDdjMCwzMC42NzgsMjQuOTU4LDU1LjYzOCw1NS42MzcsNTUuNjM4SDIxNC45MnYxOS43NDZjMCw3Ljg2OSwxLjYwMSwxNS40NzIsNC43NTgsMjIuNTk3YzMuMDEyLDYuNzk4LDcuMjk3LDEyLjgzMiwxMi43MzYsMTcuOTM0YzEwLjQwMSw5Ljc1OSwyMy45NzYsMTUuMTM0LDM4LjIyMiwxNS4xMzRjMTMuODM3LDAsMjcuMTI1LTUuMTcxLDM3LjQxNi0xNC41NThsMTQ5LjY1LTEzNi41MDhjMTEuNTI5LTEwLjUxNywxOC4xNDMtMjUuNDk5LDE4LjE0My00MS4xMDRjMC0xNS42MDYtNi42MTItMzAuNTg4LTE4LjE0Mi00MS4xMDZMMzA4LjA1MywxMTAuMjEyYy0xMC4yOTEtOS4zODgtMjMuNTc4LTE0LjU1OC0zNy40MTUtMTQuNTU4Yy0xNC4yNDgsMC0yNy44MjIsNS4zNzQtMzguMjIzLDE1LjEzMmMtNS40MzksNS4xMDItOS43MjQsMTEuMTM2LTEyLjczNiwxNy45MzVjLTMuMTU3LDcuMTI1LTQuNzU4LDE0LjcyNy00Ljc1OCwyMi41OTV2MTkuNzQ3SDc1LjM3N0M0NC42OTksMTcxLjA2MywxOS43NCwxOTYuMDIzLDE5Ljc0LDIyNi43MDF6IE0yNDQuOTYzLDIxMy45MDRjNy4wNjgsMCwxMi43OTctNS43MywxMi43OTctMTIuNzk4di00OS43ODljMC03LjY3LDYuMjgyLTEyLjgyMywxMi44NzctMTIuODIzYzIuOTY2LDAsNS45OTUsMS4wNDMsOC41NDUsMy4zNjhsMTQ5LjY1LDEzNi41MDdjNS41NjMsNS4wNzUsNS41NjMsMTMuODM0LDAsMTguOTA5bC0xNDkuNjUsMTM2LjUwOGMtMi41NSwyLjMyNi01LjU3OSwzLjM2OC04LjU0NSwzLjM2OGMtNi41OTQsMC0xMi44NzctNS4xNTMtMTIuODc3LTEyLjgyMnYtNDkuNzg5YzAtNy4wNjgtNS43MjktMTIuNzk4LTEyLjc5Ny0xMi43OThINzUuMzc3Yy03LjA2OCwwLTEyLjc5Ny01LjcyOS0xMi43OTctMTIuNzk4VjIyNi43MDFjMC03LjA2OCw1LjcyOS0xMi43OTgsMTIuNzk3LTEyLjc5OEwyNDQuOTYzLDIxMy45MDRMMjQ0Ljk2MywyMTMuOTA0eiIvPjxwYXRoIHN0eWxlPSJmaWxsOiNmYWZhZmE7IiBkPSJNMjcwLjYzNyw0ODAuNDk2Yy0xNC4zNzQsMC0yOC4wNy01LjQyMy0zOC41NjQtMTUuMjdjLTUuNDg3LTUuMTQ3LTkuODExLTExLjIzNS0xMi44NTEtMTguMDk2Yy0zLjE4Ni03LjE4OS00LjgwMS0xNC44NTktNC44MDEtMjIuNzk5di0xOS4yNDZINzUuMzc3Yy0zMC45NTQsMC01Ni4xMzctMjUuMTg0LTU2LjEzNy01Ni4xMzhWMjI2LjcwMWMwLTMwLjk1NSwyNS4xODMtNTYuMTM4LDU2LjEzNy01Ni4xMzhoMTM5LjA0M3YtMTkuMjQ3YzAtNy45MzgsMS42MTUtMTUuNjA5LDQuODAxLTIyLjc5OGMzLjAzOS02Ljg2LDcuMzYzLTEyLjk0OSwxMi44NTEtMTguMDk3YzEwLjQ5NC05Ljg0NSwyNC4xOS0xNS4yNjgsMzguNTY1LTE1LjI2OGMxMy45NjEsMCwyNy4zNjksNS4yMTYsMzcuNzUyLDE0LjY4OGwxNDkuNjUxLDEzNi41MDljMTEuNjMzLDEwLjYxMywxOC4zMDUsMjUuNzMsMTguMzA1LDQxLjQ3NnMtNi42NzIsMzAuODYyLTE4LjMwNiw0MS40NzNMMzA4LjM5LDQ2NS44MDhDMjk4LjAwNiw0NzUuMjc5LDI4NC41OTgsNDgwLjQ5NiwyNzAuNjM3LDQ4MC40OTZ6IE03NS4zNzcsMTcxLjU2M2MtMzAuNDAzLDAtNTUuMTM3LDI0LjczNS01NS4xMzcsNTUuMTM4djEyMi4yNDdjMCwzMC40MDMsMjQuNzM0LDU1LjEzOCw1NS4xMzcsNTUuMTM4SDIxNS40MnYyMC4yNDZjMCw3Ljc5OSwxLjU4NiwxNS4zMzMsNC43MTUsMjIuMzk1YzIuOTg1LDYuNzM2LDcuMjMxLDEyLjcxNiwxMi42MjEsMTcuNzcxYzEwLjMwOCw5LjY3MiwyMy43NjEsMTQuOTk4LDM3Ljg4LDE0Ljk5OGMxMy43MTEsMCwyNi44OC01LjEyNCwzNy4wNzktMTQuNDI3bDE0OS42NS0xMzYuNTA4YzExLjQyNi0xMC40MjMsMTcuOTc5LTI1LjI3MSwxNy45NzktNDAuNzM1YzAtMTUuNDY1LTYuNTUzLTMwLjMxMy0xNy45NzktNDAuNzM3TDMwNy43MTYsMTEwLjU4MmMtMTAuMTk4LTkuMzA0LTIzLjM2Ny0xNC40MjctMzcuMDc4LTE0LjQyN2MtMTQuMTIsMC0yNy41NzMsNS4zMjYtMzcuODgsMTQuOTk3Yy01LjM5LDUuMDU2LTkuNjM3LDExLjAzNi0xMi42MjIsMTcuNzczYy0zLjEyOCw3LjA2MS00LjcxNSwxNC41OTQtNC43MTUsMjIuMzkzdjIwLjI0N0g3NS4zNzd6IE0yNzAuNjM4LDQzNy42NTRjLTYuNDM0LDAtMTMuMzc3LTUuMDk0LTEzLjM3Ny0xMy4zMjJ2LTQ5Ljc4OWMwLTYuNzgxLTUuNTE3LTEyLjI5OC0xMi4yOTctMTIuMjk4SDc1LjM3N2MtNy4zMzIsMC0xMy4yOTctNS45NjYtMTMuMjk3LTEzLjI5OFYyMjYuNzAxYzAtNy4zMzMsNS45NjUtMTMuMjk4LDEzLjI5Ny0xMy4yOThoMTY5LjU4NWMwLDAsMC4wMDEsMCwwLjAwMSwwYzMuMjg0LDAsNi4zNzItMS4yNzksOC42OTQtMy42MDFjMi4zMjMtMi4zMjMsMy42MDItNS40MTEsMy42MDItOC42OTZ2LTQ5Ljc4OWMwLTguMjI5LDYuOTQ0LTEzLjMyMywxMy4zNzctMTMuMzIzYzMuMywwLDYuMzcyLDEuMjA5LDguODgyLDMuNDk4TDQyOS4xNywyNzhjMi43NTYsMi41MTQsNC4zMzYsNi4wOTQsNC4zMzYsOS44MjRzLTEuNTgsNy4zMS00LjMzNiw5LjgyNEwyNzkuNTIsNDM0LjE1NUMyNzcuMDExLDQzNi40NDQsMjczLjkzOSw0MzcuNjU0LDI3MC42MzgsNDM3LjY1NHogTTc1LjM3NywyMTQuNDAzYy02Ljc4MSwwLTEyLjI5Nyw1LjUxNy0xMi4yOTcsMTIuMjk4djEyMi4yNDdjMCw2Ljc4MSw1LjUxNywxMi4yOTgsMTIuMjk3LDEyLjI5OGgxNjkuNTg1YzcuMzMyLDAsMTMuMjk3LDUuOTY2LDEzLjI5NywxMy4yOTh2NDkuNzg5YzAsNy42MTEsNi40MjUsMTIuMzIyLDEyLjM3NywxMi4zMjJjMy4wNDgsMCw1Ljg4Ni0xLjExOSw4LjIwOC0zLjIzN2wxNDkuNjUtMTM2LjUwOGMyLjU0OC0yLjMyNSw0LjAxLTUuNjM2LDQuMDEtOS4wODVjMC0zLjQ0OS0xLjQ2Mi02Ljc2MS00LjAxLTkuMDg1bC0xNDkuNjUtMTM2LjUwN2MtMi4zMjMtMi4xMTgtNS4xNjEtMy4yMzctOC4yMDgtMy4yMzdjLTcuNzQ4LDAtMTIuMzc3LDYuMjY2LTEyLjM3NywxMi4zMjN2NDkuNzg5YzAsNy4zMzMtNS45NjUsMTMuMjk4LTEzLjI5NywxMy4yOThMNzUuMzc3LDIxNC40MDN6Ii8+PC9nPjwvZz48L2c+PC9zdmc+);
+    background-size: 2rem calc(2rem - 0.5rem);
+    content: "";
+    display: inline-block;
+    height: calc(2rem - 0.5rem);
+    margin-right: 1rem;
+    opacity: 0.3;
+    width: 2rem; } }
+
+@media screen and (min-width: 768px) {
+  .mainHeader {
+    padding-bottom: 0; }
+  .mainMenu {
+    height: calc( 2.6 * 2rem + 2 * 0.3rem);
+    padding-top: 0.3rem; }
+  .mainMenu__item {
+    font-size: 2rem;
+    margin-left: 3rem;
+    -webkit-box-align: left;
+        -ms-flex-align: left;
+            align-items: left; }
+    .mainMenu__item:first-child {
+      margin-left: 0; }
+    .mainMenu__item.-login {
+      margin-left: auto;
+      margin-right: 3rem; }
+  .mainMenu__link {
+    border-bottom: 0.3rem solid transparent;
+    display: inline-block;
+    font-family: "Cabin", sans-serif;
+    line-height: calc( 2.6 * 2rem - 0.3rem + 0.25rem);
+    text-decoration: none;
+    text-transform: uppercase; }
+    .mainMenu__link.-login::before {
+      background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjU3OS4xOTNweCIgaGVpZ2h0PSI1NzkuMTkzcHgiIHZpZXdCb3g9IjAgMCA1NzkuMTkzIDU3OS4xOTMiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPjxnPjxnPjxwYXRoIHN0eWxlPSJmaWxsOiNmYWZhZmE7IiBkPSJNNTIxLjI1OSwwLjVIMjYwLjY5NWMtMTEuODMsMC0yMS40Miw5LjU5LTIxLjQyLDIxLjQyczkuNTksMjEuNDIsMjEuNDIsMjEuNDJoMjU1LjkxOHY0OTIuNTE0SDI2MS41MDFjLTExLjgzLDAtMjEuNDIsOS41OS0yMS40MiwyMS40MnM5LjU5LDIxLjQyLDIxLjQyLDIxLjQyaDI1OS43NTdjMjEuMDYxLDAsMzguMTk0LTE3LjEzNCwzOC4xOTQtMzguMTk0VjM4LjY5NEM1NTkuNDUzLDE3LjYzNCw1NDIuMzE5LDAuNSw1MjEuMjU5LDAuNXoiLz48cGF0aCBzdHlsZT0iZmlsbDojZmFmYWZhOyIgZD0iTTUyMS4yNTksNTc5LjE5M0gyNjEuNTAxYy0xMi4wODcsMC0yMS45Mi05LjgzMy0yMS45Mi0yMS45MnM5LjgzMy0yMS45MiwyMS45Mi0yMS45MmgyNTQuNjEyVjQzLjg0SDI2MC42OTVjLTEyLjA4NywwLTIxLjkyLTkuODMzLTIxLjkyLTIxLjkyUzI0OC42MDgsMCwyNjAuNjk1LDBoMjYwLjU2NGMyMS4zMzYsMCwzOC42OTQsMTcuMzU4LDM4LjY5NCwzOC42OTR2NTAxLjgwNUM1NTkuOTUzLDU2MS44MzUsNTQyLjU5NSw1NzkuMTkzLDUyMS4yNTksNTc5LjE5M3ogTTI2MS41MDEsNTM2LjM1NGMtMTEuNTM1LDAtMjAuOTIsOS4zODUtMjAuOTIsMjAuOTJzOS4zODUsMjAuOTIsMjAuOTIsMjAuOTJoMjU5Ljc1N2MyMC43ODUsMCwzNy42OTQtMTYuOTA5LDM3LjY5NC0zNy42OTRWMzguNjk0QzU1OC45NTMsMTcuOTEsNTQyLjA0NCwxLDUyMS4yNTksMUgyNjAuNjk1Yy0xMS41MzUsMC0yMC45Miw5LjM4NS0yMC45MiwyMC45MnM5LjM4NSwyMC45MiwyMC45MiwyMC45MmgyNTYuNDE4djQ5My41MTRIMjYxLjUwMXoiLz48L2c+PGc+PHBhdGggc3R5bGU9ImZpbGw6I2ZhZmFmYTsiIGQ9Ik0xOS43NCwyMjYuNzAxdjEyMi4yNDdjMCwzMC42NzgsMjQuOTU4LDU1LjYzOCw1NS42MzcsNTUuNjM4SDIxNC45MnYxOS43NDZjMCw3Ljg2OSwxLjYwMSwxNS40NzIsNC43NTgsMjIuNTk3YzMuMDEyLDYuNzk4LDcuMjk3LDEyLjgzMiwxMi43MzYsMTcuOTM0YzEwLjQwMSw5Ljc1OSwyMy45NzYsMTUuMTM0LDM4LjIyMiwxNS4xMzRjMTMuODM3LDAsMjcuMTI1LTUuMTcxLDM3LjQxNi0xNC41NThsMTQ5LjY1LTEzNi41MDhjMTEuNTI5LTEwLjUxNywxOC4xNDMtMjUuNDk5LDE4LjE0My00MS4xMDRjMC0xNS42MDYtNi42MTItMzAuNTg4LTE4LjE0Mi00MS4xMDZMMzA4LjA1MywxMTAuMjEyYy0xMC4yOTEtOS4zODgtMjMuNTc4LTE0LjU1OC0zNy40MTUtMTQuNTU4Yy0xNC4yNDgsMC0yNy44MjIsNS4zNzQtMzguMjIzLDE1LjEzMmMtNS40MzksNS4xMDItOS43MjQsMTEuMTM2LTEyLjczNiwxNy45MzVjLTMuMTU3LDcuMTI1LTQuNzU4LDE0LjcyNy00Ljc1OCwyMi41OTV2MTkuNzQ3SDc1LjM3N0M0NC42OTksMTcxLjA2MywxOS43NCwxOTYuMDIzLDE5Ljc0LDIyNi43MDF6IE0yNDQuOTYzLDIxMy45MDRjNy4wNjgsMCwxMi43OTctNS43MywxMi43OTctMTIuNzk4di00OS43ODljMC03LjY3LDYuMjgyLTEyLjgyMywxMi44NzctMTIuODIzYzIuOTY2LDAsNS45OTUsMS4wNDMsOC41NDUsMy4zNjhsMTQ5LjY1LDEzNi41MDdjNS41NjMsNS4wNzUsNS41NjMsMTMuODM0LDAsMTguOTA5bC0xNDkuNjUsMTM2LjUwOGMtMi41NSwyLjMyNi01LjU3OSwzLjM2OC04LjU0NSwzLjM2OGMtNi41OTQsMC0xMi44NzctNS4xNTMtMTIuODc3LTEyLjgyMnYtNDkuNzg5YzAtNy4wNjgtNS43MjktMTIuNzk4LTEyLjc5Ny0xMi43OThINzUuMzc3Yy03LjA2OCwwLTEyLjc5Ny01LjcyOS0xMi43OTctMTIuNzk4VjIyNi43MDFjMC03LjA2OCw1LjcyOS0xMi43OTgsMTIuNzk3LTEyLjc5OEwyNDQuOTYzLDIxMy45MDRMMjQ0Ljk2MywyMTMuOTA0eiIvPjxwYXRoIHN0eWxlPSJmaWxsOiNmYWZhZmE7IiBkPSJNMjcwLjYzNyw0ODAuNDk2Yy0xNC4zNzQsMC0yOC4wNy01LjQyMy0zOC41NjQtMTUuMjdjLTUuNDg3LTUuMTQ3LTkuODExLTExLjIzNS0xMi44NTEtMTguMDk2Yy0zLjE4Ni03LjE4OS00LjgwMS0xNC44NTktNC44MDEtMjIuNzk5di0xOS4yNDZINzUuMzc3Yy0zMC45NTQsMC01Ni4xMzctMjUuMTg0LTU2LjEzNy01Ni4xMzhWMjI2LjcwMWMwLTMwLjk1NSwyNS4xODMtNTYuMTM4LDU2LjEzNy01Ni4xMzhoMTM5LjA0M3YtMTkuMjQ3YzAtNy45MzgsMS42MTUtMTUuNjA5LDQuODAxLTIyLjc5OGMzLjAzOS02Ljg2LDcuMzYzLTEyLjk0OSwxMi44NTEtMTguMDk3YzEwLjQ5NC05Ljg0NSwyNC4xOS0xNS4yNjgsMzguNTY1LTE1LjI2OGMxMy45NjEsMCwyNy4zNjksNS4yMTYsMzcuNzUyLDE0LjY4OGwxNDkuNjUxLDEzNi41MDljMTEuNjMzLDEwLjYxMywxOC4zMDUsMjUuNzMsMTguMzA1LDQxLjQ3NnMtNi42NzIsMzAuODYyLTE4LjMwNiw0MS40NzNMMzA4LjM5LDQ2NS44MDhDMjk4LjAwNiw0NzUuMjc5LDI4NC41OTgsNDgwLjQ5NiwyNzAuNjM3LDQ4MC40OTZ6IE03NS4zNzcsMTcxLjU2M2MtMzAuNDAzLDAtNTUuMTM3LDI0LjczNS01NS4xMzcsNTUuMTM4djEyMi4yNDdjMCwzMC40MDMsMjQuNzM0LDU1LjEzOCw1NS4xMzcsNTUuMTM4SDIxNS40MnYyMC4yNDZjMCw3Ljc5OSwxLjU4NiwxNS4zMzMsNC43MTUsMjIuMzk1YzIuOTg1LDYuNzM2LDcuMjMxLDEyLjcxNiwxMi42MjEsMTcuNzcxYzEwLjMwOCw5LjY3MiwyMy43NjEsMTQuOTk4LDM3Ljg4LDE0Ljk5OGMxMy43MTEsMCwyNi44OC01LjEyNCwzNy4wNzktMTQuNDI3bDE0OS42NS0xMzYuNTA4YzExLjQyNi0xMC40MjMsMTcuOTc5LTI1LjI3MSwxNy45NzktNDAuNzM1YzAtMTUuNDY1LTYuNTUzLTMwLjMxMy0xNy45NzktNDAuNzM3TDMwNy43MTYsMTEwLjU4MmMtMTAuMTk4LTkuMzA0LTIzLjM2Ny0xNC40MjctMzcuMDc4LTE0LjQyN2MtMTQuMTIsMC0yNy41NzMsNS4zMjYtMzcuODgsMTQuOTk3Yy01LjM5LDUuMDU2LTkuNjM3LDExLjAzNi0xMi42MjIsMTcuNzczYy0zLjEyOCw3LjA2MS00LjcxNSwxNC41OTQtNC43MTUsMjIuMzkzdjIwLjI0N0g3NS4zNzd6IE0yNzAuNjM4LDQzNy42NTRjLTYuNDM0LDAtMTMuMzc3LTUuMDk0LTEzLjM3Ny0xMy4zMjJ2LTQ5Ljc4OWMwLTYuNzgxLTUuNTE3LTEyLjI5OC0xMi4yOTctMTIuMjk4SDc1LjM3N2MtNy4zMzIsMC0xMy4yOTctNS45NjYtMTMuMjk3LTEzLjI5OFYyMjYuNzAxYzAtNy4zMzMsNS45NjUtMTMuMjk4LDEzLjI5Ny0xMy4yOThoMTY5LjU4NWMwLDAsMC4wMDEsMCwwLjAwMSwwYzMuMjg0LDAsNi4zNzItMS4yNzksOC42OTQtMy42MDFjMi4zMjMtMi4zMjMsMy42MDItNS40MTEsMy42MDItOC42OTZ2LTQ5Ljc4OWMwLTguMjI5LDYuOTQ0LTEzLjMyMywxMy4zNzctMTMuMzIzYzMuMywwLDYuMzcyLDEuMjA5LDguODgyLDMuNDk4TDQyOS4xNywyNzhjMi43NTYsMi41MTQsNC4zMzYsNi4wOTQsNC4zMzYsOS44MjRzLTEuNTgsNy4zMS00LjMzNiw5LjgyNEwyNzkuNTIsNDM0LjE1NUMyNzcuMDExLDQzNi40NDQsMjczLjkzOSw0MzcuNjU0LDI3MC42MzgsNDM3LjY1NHogTTc1LjM3NywyMTQuNDAzYy02Ljc4MSwwLTEyLjI5Nyw1LjUxNy0xMi4yOTcsMTIuMjk4djEyMi4yNDdjMCw2Ljc4MSw1LjUxNywxMi4yOTgsMTIuMjk3LDEyLjI5OGgxNjkuNTg1YzcuMzMyLDAsMTMuMjk3LDUuOTY2LDEzLjI5NywxMy4yOTh2NDkuNzg5YzAsNy42MTEsNi40MjUsMTIuMzIyLDEyLjM3NywxMi4zMjJjMy4wNDgsMCw1Ljg4Ni0xLjExOSw4LjIwOC0zLjIzN2wxNDkuNjUtMTM2LjUwOGMyLjU0OC0yLjMyNSw0LjAxLTUuNjM2LDQuMDEtOS4wODVjMC0zLjQ0OS0xLjQ2Mi02Ljc2MS00LjAxLTkuMDg1bC0xNDkuNjUtMTM2LjUwN2MtMi4zMjMtMi4xMTgtNS4xNjEtMy4yMzctOC4yMDgtMy4yMzdjLTcuNzQ4LDAtMTIuMzc3LDYuMjY2LTEyLjM3NywxMi4zMjN2NDkuNzg5YzAsNy4zMzMtNS45NjUsMTMuMjk4LTEzLjI5NywxMy4yOThMNzUuMzc3LDIxNC40MDN6Ii8+PC9nPjwvZz48L2c+PC9zdmc+);
+      background-size: 2rem calc(2rem - 0.5rem);
+      content: "";
+      display: inline-block;
+      height: calc(2rem - 0.5rem);
+      margin-right: 1rem;
+      opacity: 0.3;
+      width: 2rem; }
+    .mainMenu__link:link, .mainMenu__link:visited {
+      color: #fafafa; }
+    .mainMenu__link:hover, .mainMenu__link.-active {
+      border-bottom-color: #fafafa; }
+    .mainMenu__link.-login:hover {
+      border-bottom-color: transparent; }
+    .mainMenu__link.-login:hover::before {
+      opacity: 1; } }
+
+/*!
+ * MIT License
+ *
+ * Copyright (c) 2018 Anton Zdanov
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+.footer {
+  background-color: #212121;
+  color: white;
+  font-family: "Cabin", sans-serif;
+  font-size: 2rem;
+  max-height: 15rem; }
+
+.footer__contact {
+  text-align: center; }
+
+.footer__info {
+  padding-top: 1rem; }
+
+.footer__copyright {
+  font-family: sans-serif;
+  font-size: 2rem;
+  padding: 1rem 0;
+  text-align: center; }
+
+.footer__social {
+  text-align: center; }
+
+.social__link {
+  cursor: pointer;
+  display: inline-block;
+  height: 6rem;
+  margin-left: 1rem;
+  opacity: 1;
+  overflow: hidden;
+  text-decoration: none;
+  text-indent: 100%;
+  white-space: nowrap;
+  width: 6rem; }
+  .social__link.-vk {
+    background: #fafafa url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/PjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA0NTUgNDU1IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0NTUgNDU1OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggc3R5bGU9ImZpbGwtcnVsZTpldmVub2RkO2NsaXAtcnVsZTpldmVub2RkOyIgZD0iTTAsMHY0NTVoNDU1VjBIMHogTTM0MS4wOTgsMjUxLjcyN2MxMC40NDUsMTAuMTksMjEuNDksMTkuNzg0LDMwLjg2NSwzMS4wNDljNC4xNDIsNC45NzgsOC4wNiwxMC4xMTMsMTEuMDQ2LDE1Ljg4MWM0LjIzOSw4LjI2NCwwLjM5NywxNy4zMTgtNi45ODUsMTcuODE3bC00NS44NzUtMC4wMmMtMTEuODQxLDAuOTczLTIxLjI3Ny0zLjgwMS0yOS4yMzUtMTEuOTAyYy02LjMyOC02LjQ1LTEyLjI0My0xMy4zNTQtMTguMzUyLTIwLjAyM2MtMi40ODYtMi43NDYtNS4xMTUtNS4zMTQtOC4yMzktNy4zNjJjLTYuMjY3LTQuMDYxLTExLjcwMy0yLjgyOC0xNS4yODUsMy42OTljLTMuNjQzLDYuNjQ5LTQuNDk5LDE0LjAzMS00LjgzNSwyMS40MzVjLTAuNDk5LDEwLjgwNy0zLjc2LDEzLjYzNC0xNC42MDcsMTQuMTU0Yy0yMy4yMDgsMS4wNzUtNDUuMjE4LTIuNDUxLTY1LjY1OS0xNC4xMzRjLTE4LjA1Mi0xMC4zMDctMzIuMDIyLTI0Ljg3OS00NC4xODQtNDEuMzU2Yy0yMy43MDItMzIuMTI0LTQxLjg1NS02Ny4zOTEtNTguMTU0LTEwMy42NzNjLTMuNjg0LTguMTc3LTAuOTkzLTEyLjU1OSw3Ljk5OS0xMi43MTdjMTQuOTktMC4yOTYsMjkuOTc0LTAuMjYsNDQuOTQzLTAuMDJjNi4wODksMC4xMDIsMTAuMTI5LDMuNTgyLDEyLjQ1OCw5LjMzNGM4LjEwMSwxOS45MDYsMTguMDEsMzguODUsMzAuNDQ4LDU2LjQyN2MzLjMyNyw0LjY3Nyw2LjcxLDkuMzM0LDExLjUwNCwxMi42MzZjNS4zMTQsMy42NjMsOS4zNzUsMi40NjYsMTEuODgxLTMuNDg1YzEuNTk1LTMuNzgsMi4yOTMtNy44LDIuNjI5LTExLjg0MWMxLjE5Mi0xMy44MzMsMS4zMzUtMjcuNjgxLTAuNzE4LTQxLjQ3M2MtMS4yNzQtOC42MjEtNi4xNDktMTQuMTk1LTE0Ljc0NS0xNS44MjVjLTQuMzgyLTAuODM2LTMuNzI1LTIuNDQ2LTEuNjE1LTQuOTU4YzMuNzA0LTQuMzE1LDcuMTg5LTcuMDA2LDE0LjA5My03LjAwNmg1MS44NDdjOC4xNzcsMS41OTUsMTAuMDExLDUuMjc4LDExLjEyMiwxMy40OTdsMC4wNDEsNTcuNjE5Yy0wLjA5NywzLjE4NCwxLjU5NSwxMi42MTUsNy4zMDYsMTQuNzA0YzQuNTc1LDEuNTEzLDcuNjIyLTIuMTcxLDEwLjM2OC01LjA3NWMxMi40MTctMTMuMTc2LDIxLjI3Ny0yOC43NTYsMjkuMTk0LTQ0Ljg3N2MzLjUwNS03LjA4Nyw2LjUzMi0xNC40NDksOS40NzctMjEuODE3YzIuMTctNS40NTIsNS41NTMtOC4xMzcsMTEuNzAzLTguMDRsNDkuOTE2LDAuMDYxYzEuNDcyLDAsMi45ODYsMCw0LjQzOCwwLjIzOWM4LjM5NiwxLjQ1MiwxMC43MDUsNS4wNzUsOC4wOTYsMTMuMjkzYy00LjA3NiwxMi44NzUtMTIuMDYsMjMuNjI1LTE5Ljg0LDM0LjM5MWMtOC4zNDEsMTEuNTI1LTE3LjIxNiwyMi42NDctMjUuNDk1LDM0LjIzM0MzMzEuMDg3LDIzNy4yMDEsMzMxLjY4MywyNDIuNTM1LDM0MS4wOTgsMjUxLjcyN3oiLz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48L3N2Zz4=); }
+  .social__link.-facebook {
+    background: #fafafa url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/PjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA0NTUgNDU1IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0NTUgNDU1OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggc3R5bGU9ImZpbGwtcnVsZTpldmVub2RkO2NsaXAtcnVsZTpldmVub2RkOyIgZD0iTTAsMHY0NTVoNDU1VjBIMHogTTMwMS4wMDQsMTI1LjIxN0gyNjUuNDRjLTcuMDQ0LDAtMTQuMTUzLDcuMjgtMTQuMTUzLDEyLjY5NnYzNi4yNjRoNDkuNjQ3Yy0xLjk5OSwyNy44MDctNi4xMDMsNTMuMjM1LTYuMTAzLDUzLjIzNWgtNDMuNzk4VjM4NWgtNjUuMjY2VjIyNy4zOTVoLTMxLjc3MXYtNTMuMDI5aDMxLjc3MXYtNDMuMzU2YzAtNy45MjgtMS42MDYtNjEuMDA5LDY2Ljg3Mi02MS4wMDloNDguMzY2VjEyNS4yMTd6Ii8+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PC9zdmc+); }
+  .social__link.-instagram {
+    background: #fafafa url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/PjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA0NTUgNDU1IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0NTUgNDU1OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+PHBhdGggc3R5bGU9ImZpbGwtcnVsZTpldmVub2RkO2NsaXAtcnVsZTpldmVub2RkOyIgZD0iTTMzNi4zNTEsMTA2LjM2M2gtMzUuODNjLTYuOTg2LDAuMDUxLTEyLjM0Niw1LjE1Ny0xMi4zOTYsMTIuMTA0Yy0wLjA1MSwxMi4xNTUtMC4wNTEsMjQuMjU5LDAsMzYuNDE0YzAuMDUxLDYuODk3LDUuNDExLDEyLjA2NiwxMi4zMDcsMTIuMDY2aDM1LjgxN2M3LjE4OSwwLDEyLjQ0Ny01LjIyLDEyLjQ0Ny0xMi40MDljMC4wNTEtMTEuOTE0LDAuMDUxLTIzLjg2NSwwLTM1Ljc2N0MzNDguNjk2LDExMS42MjIsMzQzLjQzOCwxMDYuNDE1LDMzNi4zNTEsMTA2LjM2M3oiLz48cGF0aCBzdHlsZT0iZmlsbC1ydWxlOmV2ZW5vZGQ7Y2xpcC1ydWxlOmV2ZW5vZGQ7IiBkPSJNMjI3LjU5MSwyODguMTA0YzMzLjQ5My0wLjA1MSw2MC41MzQtMjcuMTQzLDYwLjUzNC02MC42MzVjLTAuMDUxLTMzLjQ5My0yNy4xNDItNjAuNTIxLTYwLjYzNS02MC41MjFjLTMzLjM3OCwwLTYwLjQ3LDI3LjEyOS02MC41MjEsNjAuNDdDMTY2LjkxOCwyNjAuOTYxLDE5NC4wNiwyODguMTA0LDIyNy41OTEsMjg4LjEwNHoiLz48cGF0aCBzdHlsZT0iZmlsbC1ydWxlOmV2ZW5vZGQ7Y2xpcC1ydWxlOmV2ZW5vZGQ7IiBkPSJNMzE4LjIzOSwyNjEuNjk4Yy03LjI0LDE5LjEwMi0xOS4zNDQsMzQuNDMzLTM2LjE3Myw0NS45NTJjLTMwLjM1NSwyMC43MjktNzAuMDQ2LDIyLjQ2OS0xMDEuOTUxLDQuNDU4Yy0xNi4xMzEtOS4xMzItMjguNzgxLTIxLjc4Mi0zNy42MDgtMzguMTA0Yy0xMi4xMDQtMjIuMzI5LTE0Ljg4Ni00NS45MzktOC43NzctNzAuNTkyaC0yNy4zNDV2MTMyLjUxYzAsNy41OTUsNS4xNjksMTIuNzUyLDEyLjc1MiwxMi43NTJjNC44NjQsMC4wNTEsOS42NzgsMCwxNC41NDMsMEgzMzUuNTVjOC4xOTIsMCwxMy4xNDYtNS4wMDQsMTMuMTQ2LTEzLjE5N1YyMDMuMzYxaC0yNy4zODNDMzI2LjMzLDIyMy4yLDMyNS40MjcsMjQyLjY0NiwzMTguMjM5LDI2MS42OTh6Ii8+PHBhdGggc3R5bGU9ImZpbGwtcnVsZTpldmVub2RkO2NsaXAtcnVsZTpldmVub2RkOyIgZD0iTTAsMHY0NTVoNDU1VjBIMHogTTM4NC45NywxMDUuOTE5VjM0OS4xN2MwLDE3LjkwOS0xMy44NDQsMzMuNDkzLTMxLjY1MSwzNS41NzZjLTEuMzk3LDAuMTUyLTIuNzgxLDAuMjU0LTQuMTY2LDAuMjU0SDEwNS44OWMtMTcuNjA0LDAtMzMuMDg3LTEzLjU1Mi0zNS40MjMtMzAuOTY2Yy0wLjI5Mi0yLjAzMi0wLjQ0NS00LjExNS0wLjQ0NS02LjE0N1YxMDYuOTZjMC0xOC4xNjIsMTIuMTU1LTMyLjk0NywzMC4wMTItMzYuMzYzYzIuMTM0LTAuNDA2LDQuMzctMC41NDYsNi41NTQtMC41NDZDMTg3LjI1Myw3MCwyNjcuODc5LDcwLDM0OC41MDUsNzBjMTguOSwwLDM0LjQzMywxNC4wMzUsMzYuMzYzLDMyLjc5NUMzODUuMDIxLDEwMy44MzYsMzg0Ljk3LDEwNC44NzcsMzg0Ljk3LDEwNS45MTl6Ii8+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjwvc3ZnPg==); }
+  .social__link:first-child {
+    margin-left: 0; }
+  .social__link:hover, .social__link:active {
+    opacity: 0.8; }
+
+@media screen and (min-width: 768px) {
+  .footer__items {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; } }
+
+/*!
+ * MIT License
+ *
+ * Copyright (c) 2017 Anton Zdanov
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+/*!
+ * MIT License
+ *
+ * Copyright (c) 2017 Anton Zdanov
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+.hero {
+  color: #fafafa;
+  font-family: "Cabin", sans-serif;
+  margin-bottom: 3rem; }
+
+.heroMain {
+  text-align: center; }
+  .heroMain .heroMain__title {
+    font-size: 4rem;
+    margin: 0 auto 0;
+    padding-top: 2rem; }
+    .heroMain .heroMain__title::after {
+      background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNDczLjkzNSA0NzMuOTM1IiB4bWw6c3BhY2U9InByZXNlcnZlIj48Zz48cGF0aCBzdHlsZT0iZmlsbDojZmFmYWZhOyIgZD0iTTk3Ljk1NiwyMjcuNTkxYzAsMCw2LjE1NS04LjYzMiwyLjU4Ni0xNi40MDhjLTEwLjAyOC0yMS44ODItNDMuNDItNS41MTItNDEuMTUyLDI0LjI5OWMwLDAsMi4yNDUsNjEuODkzLDkwLjM3OSw2NC44MDhjMjIuOTcxLDAuNzY3LDU0LjE0Ny00LjIxLDc5LjA5OC0zMS43NTNjMTcuMjMxLTE5LjAyMywxMi41NDItNTQuMDQzLTkuNTYtNjIuMTg1Yy0yMy44MTYtOC43NzgtNTQuNDMyLTIuNDE3LTc3LjI4MywzMi4zNzRjLTIxLjcxNCwzMy4wNDctNjQuNTM4LDEwLjA2OS02My44MzktMTEuOTkyQzc4LjgzNiwyMDYuMzIyLDEwMi40ODQsMjE0LjMwMyw5Ny45NTYsMjI3LjU5MXoiLz48cGF0aCBzdHlsZT0iZmlsbDojZmFmYWZhOyIgZD0iTTM3NS45NDksMjI3LjU5MWMwLDAtNi4xNTUtOC42MzItMi41OTMtMTYuNDA4YzEwLjAyOC0yMS44ODIsNDMuNDIzLTUuNTEyLDQxLjE2LDI0LjI5OWMwLDAtMi4yNDUsNjEuODkzLTkwLjM4Nyw2NC44MDhjLTIyLjk2MywwLjc2Ny01NC4xNC00LjIxLTc5LjA5LTMxLjc1M2MtMTcuMjMxLTE5LjAyMy0xMi41NDItNTQuMDQzLDkuNTYtNjIuMTg1YzIzLjgxNi04Ljc3OCw1NC40MzItMi40MTcsNzcuMjgzLDMyLjM3NGMyMS43MTQsMzMuMDQ3LDY0LjUzOCwxMC4wNjksNjMuODM5LTExLjk5MkMzOTUuMDY5LDIwNi4zMjIsMzcxLjQxNCwyMTQuMzAzLDM3NS45NDksMjI3LjU5MXoiLz48L2c+PC9zdmc+) center bottom;
+      background-size: 15rem 15rem;
+      content: "";
+      display: inline-block;
+      height: 10rem;
+      width: 15rem;
+      margin-bottom: -3rem; }
+  .heroMain .heroMain__subtitle {
+    display: block;
+    font-family: "Cabin", sans-serif;
+    font-size: 5rem;
+    letter-spacing: -0.05rem;
+    text-transform: uppercase;
+    padding: 1rem 0; }
+
+.heroHeadline {
+  margin: 0 auto;
+  max-width: 35rem;
+  text-align: center; }
+  .heroHeadline .heroHeadline__title {
+    font-size: 3.5rem;
+    margin: 0; }
+    .heroHeadline .heroHeadline__title::after {
+      background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjQwLjczMXB4IiBoZWlnaHQ9IjQwLjczMXB4IiB2aWV3Qm94PSIwIDAgNDAuNzMxIDQwLjczMSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+PHBhdGggc3R5bGU9ImZpbGw6I2ZhZmFmYTsiIGQ9Ik0zNy43NjEsMTkuODMzYzAuMTE0LDAuMTY0LDAuMTg0LDAuMzYzLDAuMTg0LDAuNTc4YzAsMC40MzEtMC4yNzEsMC43OTctMC42NTMsMC45MzhjLTEuNTQ2LDEuMDk2LTkuODIsNy4zMDctMTYuMDE2LDE4LjczM2MtMC4xMjIsMC4zMDQtMC4zNzgsMC41NDgtMC43LDAuNjIxYy0wLjA4NCwwLjAyMS0wLjE2OCwwLjAyNy0wLjI1MiwwLjAyN2MtMC4zMzksMC0wLjY1Ni0wLjE1Ni0wLjgzMi0wLjQ1M2MtMC4wNDctMC4wNy0wLjA4NC0wLjE0Ni0wLjExMi0wLjIyOGMtMC44MDQtMS41Ni02LjEzMi0xMS40MjItMTUuOTg0LTE4Ljc1NmMtMC4zNTgtMC4xNTItMC42MDgtMC41MDctMC42MDgtMC45MjFjMC0wLjAwOCwwLTAuMDE2LDAtMC4wMjJjLTAuMDA0LTAuMTksMC4wNDUtMC4zODEsMC4xNDktMC41NDljMC4xMTgtMC4xOSwwLjI5NS0wLjMzMywwLjQ5OS0wLjQxYzEuMjc5LTAuODk0LDkuNjQ5LTcuMDIyLDE1Ljk2NS0xOC42MTJDMTkuNDk5LDAuMzM0LDE5Ljg5OSwwLDIwLjM3NiwwYzAuMTk2LDAsMC4zNzksMC4wNTcsMC41MzMsMC4xNTRjMC4yMTMsMC4xMiwwLjM3NiwwLjMxNiwwLjQ1NSwwLjU1M2MwLjYxMywxLjIwOSw1LjkzOCwxMS4zMTgsMTYuMDQsMTguODAyQzM3LjU0OCwxOS41ODcsMzcuNjcyLDE5LjY5OCwzNy43NjEsMTkuODMzeiIvPjwvZz48L3N2Zz4=);
+      background-size: 1.5rem 1.5rem;
+      content: "";
+      display: block;
+      height: 2rem;
+      margin: 1rem auto 0.5rem;
+      width: 1.5rem; }
+  .heroHeadline .heroHeadline__paragraph {
+    margin: 0 auto 3rem;
+    font-size: 2rem; }
+
+@media screen and (min-width: 380px) {
+  .heroMain__subtitle::after, .heroMain__subtitle::before {
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjQwLjczMXB4IiBoZWlnaHQ9IjQwLjczMXB4IiB2aWV3Qm94PSIwIDAgNDAuNzMxIDQwLjczMSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+PHBhdGggc3R5bGU9ImZpbGw6I2ZhZmFmYTsiIGQ9Ik0zNy43NjEsMTkuODMzYzAuMTE0LDAuMTY0LDAuMTg0LDAuMzYzLDAuMTg0LDAuNTc4YzAsMC40MzEtMC4yNzEsMC43OTctMC42NTMsMC45MzhjLTEuNTQ2LDEuMDk2LTkuODIsNy4zMDctMTYuMDE2LDE4LjczM2MtMC4xMjIsMC4zMDQtMC4zNzgsMC41NDgtMC43LDAuNjIxYy0wLjA4NCwwLjAyMS0wLjE2OCwwLjAyNy0wLjI1MiwwLjAyN2MtMC4zMzksMC0wLjY1Ni0wLjE1Ni0wLjgzMi0wLjQ1M2MtMC4wNDctMC4wNy0wLjA4NC0wLjE0Ni0wLjExMi0wLjIyOGMtMC44MDQtMS41Ni02LjEzMi0xMS40MjItMTUuOTg0LTE4Ljc1NmMtMC4zNTgtMC4xNTItMC42MDgtMC41MDctMC42MDgtMC45MjFjMC0wLjAwOCwwLTAuMDE2LDAtMC4wMjJjLTAuMDA0LTAuMTksMC4wNDUtMC4zODEsMC4xNDktMC41NDljMC4xMTgtMC4xOSwwLjI5NS0wLjMzMywwLjQ5OS0wLjQxYzEuMjc5LTAuODk0LDkuNjQ5LTcuMDIyLDE1Ljk2NS0xOC42MTJDMTkuNDk5LDAuMzM0LDE5Ljg5OSwwLDIwLjM3NiwwYzAuMTk2LDAsMC4zNzksMC4wNTcsMC41MzMsMC4xNTRjMC4yMTMsMC4xMiwwLjM3NiwwLjMxNiwwLjQ1NSwwLjU1M2MwLjYxMywxLjIwOSw1LjkzOCwxMS4zMTgsMTYuMDQsMTguODAyQzM3LjU0OCwxOS41ODcsMzcuNjcyLDE5LjY5OCwzNy43NjEsMTkuODMzeiIvPjwvZz48L3N2Zz4=);
+    background-size: 2rem 2rem;
+    content: "";
+    display: inline-block;
+    height: 2.75rem;
+    margin: 0 1rem 0;
+    width: 2rem; } }
+
+@media screen and (min-width: 992px) {
+  .heroHeadlines {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr); }
+  .heroHeadline {
+    max-width: inherit; } }
+
+/*!
+ * MIT License
+ *
+ * Copyright (c) 2017 Anton Zdanov
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+.mainPage {
+  width: 100%;
+  min-height: 100%;
+  background: black url("https://res.cloudinary.com/anton-zdanov/image/upload/q_auto/v1513960129/Artboard_1_0_25x_khmkll.jpg") no-repeat center top; }
+
+@media screen and (min-width: 630px) {
+  .mainPage {
+    background-image: url("https://res.cloudinary.com/anton-zdanov/image/upload/q_auto/v1513960129/Artboard_1_0_5x_oqkm20.jpg"); } }
+
+@media screen and (min-width: 1200px) {
+  .mainPage {
+    background-image: url("https://res.cloudinary.com/anton-zdanov/image/upload/q_auto/v1513960129/Artboard_1_0_75x_grffgf.jpg"); } }
+
+/*!
+ * MIT License
+ *
+ * Copyright (c) 2017 Anton Zdanov
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+.info {
+  background-color: #fafafa;
+  color: #212121;
+  font-family: "Cabin", sans-serif;
+  padding: 1rem 0;
+  margin-bottom: 4rem; }
+
+.info__article {
+  border-bottom: 3rem solid black;
+  padding-bottom: 2rem; }
+  .info__article:last-child {
+    border-bottom: none; }
+
+@media screen and (min-width: 992px) {
+  .info {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(300px, auto);
+    padding: 1rem 5rem 3rem;
+    grid-gap: 2.5rem 0; }
+  .info__article {
+    border: none;
+    padding: 0; }
+    .info__article:nth-child(odd) {
+      padding-right: 2.5rem; }
+    .info__article:nth-child(even) {
+      padding-left: 2.5rem;
+      border: 0 solid;
+      border-left-width: 0.15rem;
+      -o-border-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 15%, #c8c8c8 50%, rgba(255, 255, 255, 0) 85%, rgba(255, 255, 255, 0) 100%);
+         border-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(15%, rgba(255, 255, 255, 0)), color-stop(50%, #c8c8c8), color-stop(85%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
+         border-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 15%, #c8c8c8 50%, rgba(255, 255, 255, 0) 85%, rgba(255, 255, 255, 0) 100%);
+      border-image-slice: 1; } }
+
+/*!
+ * MIT License
+ *
+ * Copyright (c) 2017 Anton Zdanov
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+.news__title {
+  font-size: 3.5rem;
+  text-align: center;
+  text-transform: uppercase; }
+
+.news__sections {
+  height: 26rem; }
+
+.news__section {
+  max-width: 48rem;
+  margin: 0 auto 5rem;
+  padding: 0 2%; }
+
+.news__paragraph {
+  margin: 0 auto 1rem;
+  font-size: 2rem; }
+
+.news__date {
+  display: inline-block;
+  font-size: calc(2rem - 0.2rem);
+  margin: 0 auto; }
+
+.news__controls {
+  max-width: 48rem;
+  margin: 3.5rem auto 0;
+  padding: 0 2%; }
+
+.news__button {
+  width: 100%;
+  background: #212121;
+  color: #fafafa;
+  text-decoration: none;
+  padding: 0.8rem 2.5rem;
+  font-family: "Cabin", sans-serif;
+  font-size: 2em;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: none; }
+  .news__button:hover {
+    background: #353535;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
+  .news__button:active {
+    background: #616161; }
+
+/*!
+ * MIT License
+ *
+ * Copyright (c) 2017 Anton Zdanov
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+.gallery__title {
+  font-size: 3.5rem;
+  text-align: center;
+  text-transform: uppercase; }
+
+.gallery__image {
+  display: block;
+  margin: 0 auto;
+  max-width: 48rem;
+  padding: 0.7rem 2%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain; }
+
+.gallery__controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 3.5rem auto 1rem;
+  max-width: 48rem;
+  padding: 0 2%; }
+
+.gallery__button {
+  background: #212121;
+  color: #fafafa;
+  text-decoration: none;
+  padding: 0.8rem 2.5rem;
+  font-family: "Cabin", sans-serif;
+  font-size: 2em;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: none; }
+  .gallery__button:hover {
+    background: #353535;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
+  .gallery__button:active {
+    background: #616161; }
+
+/*!
+ * MIT License
+ *
+ * Copyright (c) 2017 Anton Zdanov
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+.contact__title {
+  font-size: 3.5rem;
+  text-align: center;
+  text-transform: uppercase; }
+
+.contact__info,
+.contact__schedule {
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  line-height: 1.6;
+  margin: 0 auto;
+  padding: 0 2%;
+  max-width: 48rem; }
+
+.contact__schedule {
+  margin-top: 2rem; }
+
+.contact__controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 48rem;
+  padding: 0 2%;
+  margin: 4rem auto 1rem; }
+
+.contact__button {
+  background: #212121;
+  color: #fafafa;
+  text-decoration: none;
+  padding: 0.8rem 2.5rem;
+  font-family: "Cabin", sans-serif;
+  font-size: 2em;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: none; }
+  .contact__button:hover {
+    background: #353535;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
+  .contact__button:active {
+    background: #616161; }
+
+/*!
+ * MIT License
+ *
+ * Copyright (c) 2017 Anton Zdanov
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+.registration__title {
+  font-size: 3.5rem;
+  text-align: center;
+  text-transform: uppercase; }
+
+.registration__form {
+  margin: 0 auto;
+  padding: 0 2%;
+  max-width: 48rem; }
+
+.registration__info {
+  font-size: 2rem; }
+
+.registration__field {
+  font-size: 2rem;
+  display: inline-block;
+  width: 46%;
+  margin: 0.5rem auto 0.5rem; }
+  .registration__field:nth-child(even) {
+    margin-left: 7%; }
+
+.registration__label {
+  display: inline-block;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem; }
+
+.registration__input {
+  width: 100%;
+  margin-bottom: 2rem;
+  border: 0.2rem solid black;
+  padding: 0.5rem; }
+
+.registration__button {
+  display: block;
+  width: 100%;
+  margin-top: 2.2rem;
+  background: #212121;
+  color: #fafafa;
+  text-decoration: none;
+  padding: 0.8rem 2.5rem;
+  font-family: "Cabin", sans-serif;
+  font-size: 2em;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: none; }
+  .registration__button:hover {
+    background: #353535;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
+  .registration__button:active {
+    background: #616161; }
