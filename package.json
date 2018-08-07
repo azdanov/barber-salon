@@ -1,42 +1,37 @@
 {
-    "name": "barber-salon",
-    "version": "1.0.0",
-    "description": "Barber Salon website template",
-    "main": "index.js",
-    "repository": "git@github.com:azdanov/barber-salon.git",
-    "author": "Anton Zdanov <akumael@gmail.com>",
-    "license": "MIT",
-    "private": true,
-    "dependencies": {
-        "autoprefixer": "^7.2.3",
-        "babel-preset-env": "^1.6.1",
-        "node-sass": "^4.7.2",
-        "parcel-bundler": "1.4.1",
-        "rimraf": "^2.6.2",
-        "sanitize.css": "^5.0.0"
-    },
-    "scripts": {
-        "deploy": "gh-pages -d dist",
-        "prelint:css": "prettier --write src/**/*.{scss,css}",
-        "start": "parcel src/index.html",
-        "build": "parcel build src/index.html --public-url ./",
-        "clean": "rimraf dist .cache",
-        "lint:css": "stylelint src/**/*.{scss,css} --fix --syntax scss",
-        "lint:js": "eslint --ext=js src/**/*.js --fix",
-        "lint": "run-p lint:**"
-    },
-    "devDependencies": {
-        "eslint": "^4.14.0",
-        "eslint-config-airbnb": "16.1.0",
-        "eslint-config-prettier": "^2.9.0",
-        "eslint-plugin-import": "^2.7.0",
-        "eslint-plugin-jsx-a11y": "^6.0.2",
-        "eslint-plugin-prettier": "^2.4.0",
-        "eslint-plugin-react": "^7.4.0",
-        "gh-pages": "^1.1.0",
-        "npm-run-all": "^4.1.2",
-        "prettier": "^1.9.2",
-        "stylelint": "^8.4.0",
-        "stylelint-config-standard": "^18.0.0"
-    }
+  "name": "barber-salon",
+  "version": "1.0.0",
+  "description": "Barber Salon website template",
+  "main": "index.js",
+  "repository": "git@github.com:azdanov/barber-salon.git",
+  "author": "Anton Zdanov <akumael@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "parcel-bundler": "1.9.7",
+    "rimraf": "^2.6.2",
+    "sanitize.css": "^6.0.0",
+    "typeface-cabin": "^0.0.54"
+  },
+  "scripts": {
+    "build": "parcel build src/index.html --public-url ./",
+    "clean": "rimraf dist .cache",
+    "deploy": "gh-pages -d dist",
+    "dev": "npm start",
+    "format": "prettier --write src/**/*.{css,scss,js}",
+    "lint": "stylelint src/**/*.{scss,css}",
+    "serve": "serve dist",
+    "start": "parcel src/index.html"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.2.0",
+    "node-sass": "^4.9.2",
+    "prettier": "^1.14.0",
+    "serve": "^9.4.0",
+    "stylelint": "^9.4.0",
+    "stylelint-config-prettier": "^3.3.0",
+    "stylelint-config-recommended-scss": "^3.2.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-scss": "^3.2.0"
+  }
 }
