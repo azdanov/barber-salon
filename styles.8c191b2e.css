@@ -1,33 +1,21 @@
-/*
- * MIT License
- *
- * Copyright (c) 2017 Anton Zdanov
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- */
-/*! sanitize.css v5.0.0 | CC0 License | github.com/jonathantneal/sanitize.css */
-/* Document (https://html.spec.whatwg.org/multipage/semantics.html#semantics)
-   ========================================================================== */
+/*! sanitize.css v6.0.0 | CC0 License | github.com/csstools/sanitize.css */
+/* Document
+ * ========================================================================== */
 /**
  * 1. Remove repeating backgrounds in all browsers (opinionated).
- * 2. Add box sizing inheritence in all browsers (opinionated).
+ * 2. Add border box sizing in all browsers (opinionated).
  */
 *,
 ::before,
 ::after {
   background-repeat: no-repeat;
   /* 1 */
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: border-box;
   /* 2 */ }
 
 /**
  * 1. Add text decoration inheritance in all browsers (opinionated).
- * 2. Add vertical alignment inheritence in all browsers (opinionated).
+ * 2. Add vertical alignment inheritance in all browsers (opinionated).
  */
 ::before,
 ::after {
@@ -37,34 +25,26 @@
   /* 2 */ }
 
 /**
- * 1. Add border box sizing in all browsers (opinionated).
+ * 1. Correct the line height in all browsers.
  * 2. Add the default cursor in all browsers (opinionated).
- * 3. Prevent font size adjustments after orientation changes in IE and iOS.
+ * 3. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ * 4. Breaks words to prevent prevent overflow in all browsers (opinionated).
  */
 html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  line-height: 1.15;
   /* 1 */
   cursor: default;
   /* 2 */
   -ms-text-size-adjust: 100%;
   /* 3 */
   -webkit-text-size-adjust: 100%;
-  /* 3 */ }
+  /* 3 */
+  word-break: break-word;
+  /* 4 */ }
 
-/* Sections (https://html.spec.whatwg.org/multipage/semantics.html#sections)
-   ========================================================================== */
-/**
- * Add the correct display in IE 9-.
- */
-article,
-aside,
-footer,
-header,
-nav,
-section {
-  display: block; }
-
+/* Sections
+ * ========================================================================== */
 /**
  * Remove the margin in all browsers (opinionated).
  */
@@ -77,38 +57,27 @@ body {
  */
 h1 {
   font-size: 2em;
-  margin: .67em 0; }
+  margin: 0.67em 0; }
 
-/* Grouping content (https://html.spec.whatwg.org/multipage/semantics.html#grouping-content)
-   ========================================================================== */
-/**
- * Add the correct display in IE 9-.
- * 1. Add the correct display in IE.
- */
-figcaption,
-figure,
-main {
-  /* 1 */
-  display: block; }
-
-/**
- * Add the correct margin in IE 8.
- */
-figure {
-  margin: 1em 40px; }
-
+/* Grouping content
+ * ========================================================================== */
 /**
  * 1. Add the correct box sizing in Firefox.
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
   overflow: visible;
   /* 2 */ }
+
+/**
+ * Add the correct display in IE.
+ */
+main {
+  display: block; }
 
 /**
  * Remove the list style on navigation lists in all browsers (opinionated).
@@ -127,37 +96,20 @@ pre {
   font-size: 1em;
   /* 2 */ }
 
-/* Text-level semantics (https://html.spec.whatwg.org/multipage/semantics.html#text-level-semantics)
-   ========================================================================== */
+/* Text-level semantics
+ * ========================================================================== */
 /**
- * 1. Remove the gray background on active links in IE 10.
- * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ * Remove the gray background on active links in IE 10.
  */
 a {
-  background-color: transparent;
-  /* 1 */
-  -webkit-text-decoration-skip: objects;
-  /* 2 */ }
+  background-color: transparent; }
 
 /**
- * 1. Remove the bottom border in Firefox 39-.
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ * Add the correct text decoration in Edge, IE, Opera, and Safari.
  */
 abbr[title] {
-  border-bottom: none;
-  /* 1 */
   text-decoration: underline;
-  /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
-  /* 2 */ }
-
-/**
- * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
- */
-b,
-strong {
-  font-weight: inherit; }
+  text-decoration: underline dotted; }
 
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
@@ -179,61 +131,32 @@ samp {
   /* 2 */ }
 
 /**
- * Add the correct font style in Android 4.3-.
- */
-dfn {
-  font-style: italic; }
-
-/**
- * Add the correct background and color in IE 9-.
- */
-mark {
-  background-color: #ffff00;
-  color: #000000; }
-
-/**
  * Add the correct font size in all browsers.
  */
 small {
   font-size: 80%; }
 
-/**
- * Prevent `sub` and `sup` elements from affecting the line height in
- * all browsers.
- */
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline; }
-
-sub {
-  bottom: -.25em; }
-
-sup {
-  top: -.5em; }
-
 /*
- * Remove the text shadow on text selections (opinionated).
- * 1. Restore the coloring undone by defining the text shadow (opinionated).
+ * Remove the text shadow on text selections in Firefox 61- (opinionated).
+ * 1. Restore the coloring undone by defining the text shadow
+ *    in all browsers (opinionated).
  */
 ::-moz-selection {
   background-color: #b3d4fc;
   /* 1 */
-  color: #000000;
+  color: #000;
   /* 1 */
   text-shadow: none; }
 
 ::selection {
   background-color: #b3d4fc;
   /* 1 */
-  color: #000000;
+  color: #000;
   /* 1 */
   text-shadow: none; }
 
-/* Embedded content (https://html.spec.whatwg.org/multipage/embedded-content.html#embedded-content)
-   ========================================================================== */
+/* Embedded content
+ * ========================================================================== */
 /*
  * Change the alignment on media elements in all browers (opinionated).
  */
@@ -277,16 +200,16 @@ svg {
 svg:not(:root) {
   overflow: hidden; }
 
-/* Tabular data (https://html.spec.whatwg.org/multipage/tables.html#tables)
-   ========================================================================== */
+/* Tabular data
+ * ========================================================================== */
 /**
- * Collapse border spacing
+ * Collapse border spacing in all browsers (opinionated).
  */
 table {
   border-collapse: collapse; }
 
-/* Forms (https://html.spec.whatwg.org/multipage/forms.html#forms)
-   ========================================================================== */
+/* Forms
+ * ========================================================================== */
 /**
  * Remove the margin in Firefox and Safari.
  */
@@ -304,53 +227,31 @@ button,
 input,
 select,
 textarea {
-  background-color: transparent;
-  color: inherit;
+  font-family: inherit;
   font-size: inherit;
   line-height: inherit; }
 
 /**
- * Show the overflow in IE.
- * 1. Show the overflow in Edge.
+ * 1. Show the overflow in IE.
+ * 2. Remove the inheritance of text transform in Edge, Firefox, and IE.
  */
-button,
-input {
+button {
+  overflow: visible;
   /* 1 */
-  overflow: visible; }
-
-/**
- * Remove the inheritance of text transform in Edge, Firefox, and IE.
- * 1. Remove the inheritance of text transform in Firefox.
- */
-button,
-select {
-  /* 1 */
-  text-transform: none; }
-
-/**
- * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
- *    controls in Android 4.
- * 2. Correct the inability to style clickable types in iOS and Safari.
- */
-button,
-html [type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button;
+  text-transform: none;
   /* 2 */ }
 
 /**
- * Remove the inner border and padding in Firefox.
+ * Correct the inability to style clickable types in iOS and Safari.
  */
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
-  border-style: none;
-  padding: 0; }
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; }
 
 /**
- * Restore the focus styles unset by the previous rule.
+ * Restore the focus styles unset by the previous rule in Firefox.
  */
 button:-moz-focusring,
 [type="button"]:-moz-focusring,
@@ -359,14 +260,32 @@ button:-moz-focusring,
   outline: 1px dotted ButtonText; }
 
 /**
+ * Remove the inner border and padding in Firefox.
+ */
+::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em; }
+
+/**
+ * Show the overflow in Edge and IE.
+ */
+input {
+  overflow: visible; }
+
+/**
  * 1. Correct the text wrapping in Edge and IE.
  * 2. Correct the color inheritance from `fieldset` elements in IE.
  * 3. Remove the padding so developers are not caught out when they zero out
  *    `fieldset` elements in all browsers.
  */
 legend {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   color: inherit;
   /* 2 */
@@ -380,7 +299,7 @@ legend {
   /* 1 */ }
 
 /**
- * 1. Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge and IE.
  * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
  */
 progress {
@@ -388,6 +307,12 @@ progress {
   /* 1 */
   vertical-align: baseline;
   /* 2 */ }
+
+/**
+ * Remove the inheritance of text transform in Firefox.
+ */
+select {
+  text-transform: none; }
 
 /**
  * 1. Remove the default vertical scrollbar in IE.
@@ -405,8 +330,7 @@ textarea {
  */
 [type="checkbox"],
 [type="radio"] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */ }
@@ -414,8 +338,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
   height: auto; }
 
 /**
@@ -429,10 +353,9 @@ textarea {
   /* 2 */ }
 
 /**
- * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type="search"]::-webkit-search-cancel-button,
-[type="search"]::-webkit-search-decoration {
+::-webkit-search-decoration {
   -webkit-appearance: none; }
 
 /**
@@ -445,15 +368,36 @@ textarea {
   font: inherit;
   /* 2 */ }
 
-/* Interactive elements (https://html.spec.whatwg.org/multipage/forms.html#interactive-elements)
-   ========================================================================== */
+/* Interactive
+ * ========================================================================== */
 /*
- * Add the correct display in IE 9-.
- * 1. Add the correct display in Edge, IE, and Firefox.
+ * Add the correct display in Edge and IE.
  */
-details,
-menu {
+details {
   display: block; }
+
+/*
+ * Add the correct styles in Edge, IE, and Safari.
+ */
+dialog {
+  background-color: white;
+  border: solid;
+  color: black;
+  display: block;
+  height: -moz-fit-content;
+  height: -webkit-fit-content;
+  height: fit-content;
+  left: 0;
+  margin: auto;
+  padding: 1em;
+  position: absolute;
+  right: 0;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content; }
+
+dialog:not([open]) {
+  display: none; }
 
 /*
  * Add the correct display in all browsers.
@@ -461,8 +405,8 @@ menu {
 summary {
   display: list-item; }
 
-/* Scripting (https://html.spec.whatwg.org/multipage/scripting.html#scripting-3)
-   ========================================================================== */
+/* Scripting
+ * ========================================================================== */
 /**
  * Add the correct display in IE 9-.
  */
@@ -475,11 +419,11 @@ canvas {
 template {
   display: none; }
 
-/* User interaction (https://html.spec.whatwg.org/multipage/interaction.html#editing)
-   ========================================================================== */
+/* User interaction
+ * ========================================================================== */
 /*
- * Remove the tapping delay on clickable elements (opinionated).
- * 1. Remove the tapping delay in IE 10.
+ * 1. Remove the tapping delay on clickable elements in all browsers (opinionated).
+ * 2. Remove the tapping delay in IE 10.
  */
 a,
 area,
@@ -492,7 +436,8 @@ textarea,
 [tabindex] {
   -ms-touch-action: manipulation;
   /* 1 */
-  touch-action: manipulation; }
+  touch-action: manipulation;
+  /* 2 */ }
 
 /**
  * Add the correct display in IE 10-.
@@ -500,82 +445,47 @@ textarea,
 [hidden] {
   display: none; }
 
-/* ARIA (https://w3c.github.io/html-aria/)
-   ========================================================================== */
+/* Accessibility
+ * ========================================================================== */
 /**
- * Change the cursor on busy elements (opinionated).
+ * Change the cursor on busy elements in all browsers (opinionated).
  */
 [aria-busy="true"] {
   cursor: progress; }
 
 /*
- * Change the cursor on control elements (opinionated).
+ * Change the cursor on control elements in all browsers (opinionated).
  */
 [aria-controls] {
   cursor: pointer; }
 
 /*
- * Change the display on visually hidden accessible elements (opinionated).
+ * Change the cursor on disabled, not-editable, or otherwise
+ * inoperable elements in all browsers (opinionated).
+ */
+[aria-disabled],
+[disabled] {
+  cursor: disabled; }
+
+/*
+ * Change the display on visually hidden accessible elements
+ * in all browsers (opinionated).
  */
 [aria-hidden="false"][hidden]:not(:focus) {
   clip: rect(0, 0, 0, 0);
   display: inherit;
   position: absolute; }
 
-/*
- * Change the cursor on disabled, not-editable, or otherwise
- * inoperable elements (opinionated).
- */
-[aria-disabled] {
-  cursor: default; }
+@font-face {
+  font-family: "Cabin";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src: local("Cabin SemiBold "), local("Cabin-SemiBold"), url("cabin-latin-600.27040058.woff2") format("woff2"), url("cabin-latin-600.7d7f6d9c.woff") format("woff"); }
 
-/*!
- * MIT License
- *
- * Copyright (c) 2017 Anton Zdanov
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- */
-/*!
- * MIT License
- *
- * Copyright (c) 2017 Anton Zdanov
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- */
 .root {
   font-size: 62.5%; }
 
-/*!
- * MIT License
- *
- * Copyright (c) 2017 Anton Zdanov
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- */
-/*!
- * MIT License
- *
- * Copyright (c) 2017 Anton Zdanov
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- */
 .u-wrapper {
   margin: 0 auto;
   max-width: 98%;
@@ -589,66 +499,14 @@ textarea,
   .u-wrapper {
     max-width: 992px; } }
 
-/*!
- * MIT License
- *
- * Copyright (c) 2017 Anton Zdanov
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- */
-/*!
- * MIT License
- *
- * Copyright (c) 2018 Anton Zdanov
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- */
-/*!
- * MIT License
- *
- * Copyright (c) 2018 Anton Zdanov
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- */
 .root {
   background-color: #212121; }
 
 .page {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  min-height: 100vh;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column; }
+  flex-direction: column;
+  min-height: 100vh; }
 
-.footer {
-  margin-top: auto; }
-
-/*!
- * MIT License
- *
- * Copyright (c) 2018 Anton Zdanov
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- */
 .mainHeader {
   background-color: #212121;
   width: 100%; }
@@ -698,21 +556,12 @@ textarea,
 
 @media screen and (min-width: 425px) {
   .mainMenu {
-    display: -webkit-box;
-    display: -ms-flexbox;
+    align-content: space-around;
+    align-items: center;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-line-pack: distribute;
-        align-content: space-around;
-    height: calc(3.9 * 2rem); }
+    flex-flow: row wrap;
+    height: calc(3.9 * 2rem);
+    justify-content: space-around; }
   .mainMenu__item:nth-child(odd) {
     padding: 0;
     text-align: left;
@@ -740,14 +589,12 @@ textarea,
   .mainHeader {
     padding-bottom: 0; }
   .mainMenu {
-    height: calc( 2.6 * 2rem + 2 * 0.3rem);
+    height: calc(2.6 * 2rem + 2 * 0.3rem);
     padding-top: 0.3rem; }
   .mainMenu__item {
+    align-items: left;
     font-size: 2rem;
-    margin-left: 3rem;
-    -webkit-box-align: left;
-        -ms-flex-align: left;
-            align-items: left; }
+    margin-left: 3rem; }
     .mainMenu__item:first-child {
       margin-left: 0; }
     .mainMenu__item.-login {
@@ -778,23 +625,11 @@ textarea,
     .mainMenu__link.-login:hover::before {
       opacity: 1; } }
 
-/*!
- * MIT License
- *
- * Copyright (c) 2018 Anton Zdanov
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- */
 .footer {
   background-color: #212121;
   color: white;
   font-family: "Cabin", sans-serif;
-  font-size: 2rem;
-  max-height: 15rem; }
+  font-size: 2rem; }
 
 .footer__contact {
   text-align: center; }
@@ -835,36 +670,10 @@ textarea,
 
 @media screen and (min-width: 768px) {
   .footer__items {
-    display: -ms-grid;
+    align-items: center;
     display: grid;
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; } }
+    grid-template-columns: repeat(3, 1fr); } }
 
-/*!
- * MIT License
- *
- * Copyright (c) 2017 Anton Zdanov
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- */
-/*!
- * MIT License
- *
- * Copyright (c) 2017 Anton Zdanov
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- */
 .hero {
   color: #fafafa;
   font-family: "Cabin", sans-serif;
@@ -882,15 +691,15 @@ textarea,
       content: "";
       display: inline-block;
       height: 10rem;
-      width: 15rem;
-      margin-bottom: -3rem; }
+      margin-bottom: -3rem;
+      width: 15rem; }
   .heroMain .heroMain__subtitle {
     display: block;
     font-family: "Cabin", sans-serif;
     font-size: 5rem;
     letter-spacing: -0.05rem;
-    text-transform: uppercase;
-    padding: 1rem 0; }
+    padding: 1rem 0;
+    text-transform: uppercase; }
 
 .heroHeadline {
   margin: 0 auto;
@@ -908,8 +717,8 @@ textarea,
       margin: 1rem auto 0.5rem;
       width: 1.5rem; }
   .heroHeadline .heroHeadline__paragraph {
-    margin: 0 auto 3rem;
-    font-size: 2rem; }
+    font-size: 2rem;
+    margin: 0 auto 3rem; }
 
 @media screen and (min-width: 380px) {
   .heroMain__subtitle::after, .heroMain__subtitle::before {
@@ -923,54 +732,28 @@ textarea,
 
 @media screen and (min-width: 992px) {
   .heroHeadlines {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr); }
+    grid-template-columns: repeat(3, 1fr); }
   .heroHeadline {
     max-width: inherit; } }
 
-/*!
- * MIT License
- *
- * Copyright (c) 2017 Anton Zdanov
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- */
 .mainPage {
-  width: 100%;
+  background: black url("https://res.cloudinary.com/anton-zdanov/image/upload/q_auto/v1513960129/Artboard_1_0_25x_khmkll.jpg") no-repeat center top;
   min-height: 100%;
-  background: black url("https://res.cloudinary.com/anton-zdanov/image/upload/q_auto/v1513960129/Artboard_1_0_25x_khmkll.jpg") no-repeat center top; }
+  width: 100%; }
+  @media screen and (min-width: 630px) {
+    .mainPage {
+      background-image: url("https://res.cloudinary.com/anton-zdanov/image/upload/q_auto/v1513960129/Artboard_1_0_5x_oqkm20.jpg"); } }
+  @media screen and (min-width: 1200px) {
+    .mainPage {
+      background-image: url("https://res.cloudinary.com/anton-zdanov/image/upload/q_auto/v1513960129/Artboard_1_0_75x_grffgf.jpg"); } }
 
-@media screen and (min-width: 630px) {
-  .mainPage {
-    background-image: url("https://res.cloudinary.com/anton-zdanov/image/upload/q_auto/v1513960129/Artboard_1_0_5x_oqkm20.jpg"); } }
-
-@media screen and (min-width: 1200px) {
-  .mainPage {
-    background-image: url("https://res.cloudinary.com/anton-zdanov/image/upload/q_auto/v1513960129/Artboard_1_0_75x_grffgf.jpg"); } }
-
-/*!
- * MIT License
- *
- * Copyright (c) 2017 Anton Zdanov
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- */
 .info {
   background-color: #fafafa;
   color: #212121;
   font-family: "Cabin", sans-serif;
-  padding: 1rem 0;
-  margin-bottom: 4rem; }
+  margin-bottom: 4rem;
+  padding: 1rem 0; }
 
 .info__article {
   border-bottom: 3rem solid black;
@@ -980,10 +763,8 @@ textarea,
 
 @media screen and (min-width: 992px) {
   .info {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: minmax(300px, auto);
     padding: 1rem 5rem 3rem;
     grid-gap: 2.5rem 0; }
@@ -996,22 +777,9 @@ textarea,
       padding-left: 2.5rem;
       border: 0 solid;
       border-left-width: 0.15rem;
-      -o-border-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 15%, #c8c8c8 50%, rgba(255, 255, 255, 0) 85%, rgba(255, 255, 255, 0) 100%);
-         border-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(15%, rgba(255, 255, 255, 0)), color-stop(50%, #c8c8c8), color-stop(85%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
-         border-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 15%, #c8c8c8 50%, rgba(255, 255, 255, 0) 85%, rgba(255, 255, 255, 0) 100%);
+      border-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 15%, #c8c8c8 50%, rgba(255, 255, 255, 0) 85%, rgba(255, 255, 255, 0) 100%);
       border-image-slice: 1; } }
 
-/*!
- * MIT License
- *
- * Copyright (c) 2017 Anton Zdanov
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- */
 .news__title {
   font-size: 3.5rem;
   text-align: center;
@@ -1021,13 +789,13 @@ textarea,
   height: 26rem; }
 
 .news__section {
-  max-width: 48rem;
   margin: 0 auto 5rem;
+  max-width: 48rem;
   padding: 0 2%; }
 
 .news__paragraph {
-  margin: 0 auto 1rem;
-  font-size: 2rem; }
+  font-size: 2rem;
+  margin: 0 auto 1rem; }
 
 .news__date {
   display: inline-block;
@@ -1035,8 +803,8 @@ textarea,
   margin: 0 auto; }
 
 .news__controls {
-  max-width: 48rem;
   margin: 3.5rem auto 0;
+  max-width: 48rem;
   padding: 0 2%; }
 
 .news__button {
@@ -1044,7 +812,7 @@ textarea,
   background: #212121;
   color: #fafafa;
   text-decoration: none;
-  padding: 0.8rem 2.5rem;
+  padding: 1rem 1.5rem;
   font-family: "Cabin", sans-serif;
   font-size: 2em;
   cursor: pointer;
@@ -1052,52 +820,42 @@ textarea,
   border: none; }
   .news__button:hover {
     background: #353535;
-    -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease; }
   .news__button:active {
     background: #616161; }
 
-/*!
- * MIT License
- *
- * Copyright (c) 2017 Anton Zdanov
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- */
 .gallery__title {
   font-size: 3.5rem;
   text-align: center;
   text-transform: uppercase; }
 
 .gallery__image {
-  display: block;
-  margin: 0 auto;
-  max-width: 48rem;
-  padding: 0.7rem 2%;
-  width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain; }
+  text-align: center;
+  display: block; }
+  .gallery__image > * {
+    width: 80%;
+    height: auto; }
+  @media screen and (min-width: 768px) {
+    .gallery__image > * {
+      width: 65%;
+      height: auto; } }
+  @media screen and (min-width: 992px) {
+    .gallery__image > * {
+      width: 390px;
+      height: auto; } }
 
 .gallery__controls {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin: 3.5rem auto 1rem;
   max-width: 48rem;
-  padding: 0 2%; }
+  padding: 0; }
 
 .gallery__button {
   background: #212121;
   color: #fafafa;
   text-decoration: none;
-  padding: 0.8rem 2.5rem;
+  padding: 1rem 1.5rem;
   font-family: "Cabin", sans-serif;
   font-size: 2em;
   cursor: pointer;
@@ -1105,22 +863,10 @@ textarea,
   border: none; }
   .gallery__button:hover {
     background: #353535;
-    -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease; }
   .gallery__button:active {
     background: #616161; }
 
-/*!
- * MIT License
- *
- * Copyright (c) 2017 Anton Zdanov
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- */
 .contact__title {
   font-size: 3.5rem;
   text-align: center;
@@ -1132,28 +878,24 @@ textarea,
   letter-spacing: 0.1rem;
   line-height: 1.6;
   margin: 0 auto;
-  padding: 0 2%;
-  max-width: 48rem; }
+  max-width: 48rem;
+  padding: 0 2%; }
 
 .contact__schedule {
   margin-top: 2rem; }
 
 .contact__controls {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
+  margin: 4rem auto 1rem;
   max-width: 48rem;
-  padding: 0 2%;
-  margin: 4rem auto 1rem; }
+  padding: 0 2%; }
 
 .contact__button {
   background: #212121;
   color: #fafafa;
   text-decoration: none;
-  padding: 0.8rem 2.5rem;
+  padding: 1rem 1.5rem;
   font-family: "Cabin", sans-serif;
   font-size: 2em;
   cursor: pointer;
@@ -1161,22 +903,10 @@ textarea,
   border: none; }
   .contact__button:hover {
     background: #353535;
-    -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease; }
   .contact__button:active {
     background: #616161; }
 
-/*!
- * MIT License
- *
- * Copyright (c) 2017 Anton Zdanov
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- */
 .registration__title {
   font-size: 3.5rem;
   text-align: center;
@@ -1184,39 +914,39 @@ textarea,
 
 .registration__form {
   margin: 0 auto;
-  padding: 0 2%;
-  max-width: 48rem; }
+  max-width: 48rem;
+  padding: 0 2%; }
 
 .registration__info {
   font-size: 2rem; }
 
 .registration__field {
-  font-size: 2rem;
   display: inline-block;
-  width: 46%;
-  margin: 0.5rem auto 0.5rem; }
+  font-size: 2rem;
+  margin: 0.5rem auto 0.5rem;
+  width: 46%; }
   .registration__field:nth-child(even) {
     margin-left: 7%; }
 
 .registration__label {
   display: inline-block;
-  text-transform: uppercase;
-  margin-bottom: 0.5rem; }
+  margin-bottom: 0.5rem;
+  text-transform: uppercase; }
 
 .registration__input {
-  width: 100%;
-  margin-bottom: 2rem;
   border: 0.2rem solid black;
-  padding: 0.5rem; }
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+  width: 100%; }
 
 .registration__button {
   display: block;
+  margin-top: 2.55rem;
   width: 100%;
-  margin-top: 2.2rem;
   background: #212121;
   color: #fafafa;
   text-decoration: none;
-  padding: 0.8rem 2.5rem;
+  padding: 1rem 1.5rem;
   font-family: "Cabin", sans-serif;
   font-size: 2em;
   cursor: pointer;
@@ -1224,7 +954,6 @@ textarea,
   border: none; }
   .registration__button:hover {
     background: #353535;
-    -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease; }
   .registration__button:active {
     background: #616161; }

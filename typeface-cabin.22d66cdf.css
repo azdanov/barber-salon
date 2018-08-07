@@ -1,0 +1,104 @@
+/* cabin-400normal - latin */
+@font-face {
+  font-family: 'Cabin';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src:
+    local('Cabin Regular '),
+    local('Cabin-Regular'),
+    url('cabin-latin-400.75874290.woff2') format('woff2'), 
+    url('cabin-latin-400.30393bc7.woff') format('woff'); /* Modern Browsers */
+}
+
+/* cabin-400italic - latin */
+@font-face {
+  font-family: 'Cabin';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 400;
+  src:
+    local('Cabin Regular italic'),
+    local('Cabin-Regularitalic'),
+    url('cabin-latin-400italic.b8e1f93e.woff2') format('woff2'), 
+    url('cabin-latin-400italic.d24a22b6.woff') format('woff'); /* Modern Browsers */
+}
+
+/* cabin-500normal - latin */
+@font-face {
+  font-family: 'Cabin';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src:
+    local('Cabin Medium '),
+    local('Cabin-Medium'),
+    url('cabin-latin-500.73801605.woff2') format('woff2'), 
+    url('cabin-latin-500.78a9c832.woff') format('woff'); /* Modern Browsers */
+}
+
+/* cabin-500italic - latin */
+@font-face {
+  font-family: 'Cabin';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 500;
+  src:
+    local('Cabin Medium italic'),
+    local('Cabin-Mediumitalic'),
+    url('cabin-latin-500italic.2eff51a6.woff2') format('woff2'), 
+    url('cabin-latin-500italic.33e2f430.woff') format('woff'); /* Modern Browsers */
+}
+
+/* cabin-600normal - latin */
+@font-face {
+  font-family: 'Cabin';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src:
+    local('Cabin SemiBold '),
+    local('Cabin-SemiBold'),
+    url('cabin-latin-600.27040058.woff2') format('woff2'), 
+    url('cabin-latin-600.7d7f6d9c.woff') format('woff'); /* Modern Browsers */
+}
+
+/* cabin-600italic - latin */
+@font-face {
+  font-family: 'Cabin';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 600;
+  src:
+    local('Cabin SemiBold italic'),
+    local('Cabin-SemiBolditalic'),
+    url('cabin-latin-600italic.1713782b.woff2') format('woff2'), 
+    url('cabin-latin-600italic.1c0299f6.woff') format('woff'); /* Modern Browsers */
+}
+
+/* cabin-700normal - latin */
+@font-face {
+  font-family: 'Cabin';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src:
+    local('Cabin Bold '),
+    local('Cabin-Bold'),
+    url('cabin-latin-700.68e26f62.woff2') format('woff2'), 
+    url('cabin-latin-700.4b2282d3.woff') format('woff'); /* Modern Browsers */
+}
+
+/* cabin-700italic - latin */
+@font-face {
+  font-family: 'Cabin';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 700;
+  src:
+    local('Cabin Bold italic'),
+    local('Cabin-Bolditalic'),
+    url('cabin-latin-700italic.6da25a1c.woff2') format('woff2'), 
+    url('cabin-latin-700italic.0e174fc4.woff') format('woff'); /* Modern Browsers */
+}
+
