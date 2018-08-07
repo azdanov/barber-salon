@@ -16,7 +16,6 @@ Graphics are from [svgrepo](https://www.svgrepo.com/).
 # To install dependencies
 yarn
 
-
 # Start in development mode
 yarn start
 # or
